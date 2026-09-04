@@ -1,0 +1,102 @@
+{
+  "n_subjects": 181,
+  "threshold_policy": "per_fold_inner_val_max_BA",
+  "accuracy": 0.569060773480663,
+  "balanced_accuracy": 0.5785550458715596,
+  "f1": 0.5668262150220913,
+  "roc_auc": 0.6527777777777779,
+  "confusion_matrix": [
+    [
+      45,
+      27
+    ],
+    [
+      51,
+      58
+    ]
+  ],
+  "per_fold": [
+    {
+      "fold": 1,
+      "best_epoch": 8,
+      "threshold": 0.7923340797424316,
+      "val_auc": 0.7407407407407407,
+      "val_ba": 0.75,
+      "test_auc": 0.6614906832298136,
+      "test_ba": 0.5667701863354038,
+      "test_acc": 0.5135135135135135,
+      "n_test": 37,
+      "test_strata": {
+        "pd_nhy2": 12,
+        "pd_nhy1": 11,
+        "control": 14
+      }
+    },
+    {
+      "fold": 2,
+      "best_epoch": 1,
+      "threshold": 0.3307592570781708,
+      "val_auc": 0.8518518518518519,
+      "val_ba": 0.8611111111111112,
+      "test_auc": 0.6095238095238096,
+      "test_ba": 0.5428571428571429,
+      "test_acc": 0.5555555555555556,
+      "n_test": 36,
+      "test_strata": {
+        "pd_nhy2": 11,
+        "pd_nhy1": 10,
+        "control": 15
+      }
+    },
+    {
+      "fold": 3,
+      "best_epoch": 4,
+      "threshold": 0.4058941900730133,
+      "val_auc": 0.8703703703703703,
+      "val_ba": 0.8611111111111112,
+      "test_auc": 0.6603174603174603,
+      "test_ba": 0.6,
+      "test_acc": 0.6111111111111112,
+      "n_test": 36,
+      "test_strata": {
+        "control": 15,
+        "pd_nhy1": 10,
+        "pd_nhy2": 11
+      }
+    },
+    {
+      "fold": 4,
+      "best_epoch": 1,
+      "threshold": 0.6024259328842163,
+      "val_auc": 0.6666666666666666,
+      "val_ba": 0.7222222222222222,
+      "test_auc": 0.7175324675324676,
+      "test_ba": 0.6071428571428572,
+      "test_acc": 0.5833333333333334,
+      "n_test": 36,
+      "test_strata": {
+        "control": 14,
+        "pd_nhy2": 12,
+        "pd_nhy1": 10
+      }
+    },
+    {
+      "fold": 5,
+      "best_epoch": 3,
+      "threshold": 0.4787856638431549,
+      "val_auc": 1.0,
+      "val_ba": 1.0,
+      "test_auc": 0.6428571428571428,
+      "test_ba": 0.5941558441558441,
+      "test_acc": 0.5833333333333334,
+      "n_test": 36,
+      "test_strata": {
+        "pd_nhy1": 10,
+        "control": 14,
+        "pd_nhy2": 12
+      }
+    }
+  ],
+  "test_ba_mean": 0.5821852060982496,
+  "test_auc_mean": 0.6583443126921388
+}

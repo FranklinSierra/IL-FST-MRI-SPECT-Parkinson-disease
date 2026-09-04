@@ -1,0 +1,284 @@
+{
+  "n_subjects": 34,
+  "accuracy": 0.5294117647058824,
+  "balanced_accuracy": 0.6,
+  "f1_macro": 0.48484848484848486,
+  "confusion_matrix": [
+    [
+      14,
+      0
+    ],
+    [
+      16,
+      4
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.4666666666666667,
+      "recall": 1.0,
+      "f1-score": 0.6363636363636364,
+      "support": 14.0
+    },
+    "1": {
+      "precision": 1.0,
+      "recall": 0.2,
+      "f1-score": 0.3333333333333333,
+      "support": 20.0
+    },
+    "accuracy": 0.5294117647058824,
+    "macro avg": {
+      "precision": 0.7333333333333334,
+      "recall": 0.6,
+      "f1-score": 0.48484848484848486,
+      "support": 34.0
+    },
+    "weighted avg": {
+      "precision": 0.780392156862745,
+      "recall": 0.5294117647058824,
+      "f1-score": 0.4581105169340463,
+      "support": 34.0
+    }
+  },
+  "per_subject": [
+    {
+      "subject_id": "3107",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.2600215971469879
+    },
+    {
+      "subject_id": "3108",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.03659621998667717
+    },
+    {
+      "subject_id": "3116",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.05893703177571297
+    },
+    {
+      "subject_id": "3119",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.3557202219963074
+    },
+    {
+      "subject_id": "3120",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.09761036187410355
+    },
+    {
+      "subject_id": "3134",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.6724377274513245
+    },
+    {
+      "subject_id": "3165",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.10982979834079742
+    },
+    {
+      "subject_id": "3166",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.24761410057544708
+    },
+    {
+      "subject_id": "3172",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.05589792877435684
+    },
+    {
+      "subject_id": "3182",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.09934759140014648
+    },
+    {
+      "subject_id": "3185",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.18885257840156555
+    },
+    {
+      "subject_id": "3188",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.023996656760573387
+    },
+    {
+      "subject_id": "3191",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.027979951351881027
+    },
+    {
+      "subject_id": "3305",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.40221351385116577
+    },
+    {
+      "subject_id": "3320",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.028415877372026443
+    },
+    {
+      "subject_id": "3332",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.6010105013847351
+    },
+    {
+      "subject_id": "3361",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.05682557448744774
+    },
+    {
+      "subject_id": "3374",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.18718445301055908
+    },
+    {
+      "subject_id": "3386",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.36041200160980225
+    },
+    {
+      "subject_id": "3552",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.17275798320770264
+    },
+    {
+      "subject_id": "3554",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.3131354749202728
+    },
+    {
+      "subject_id": "3559",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.08555233478546143
+    },
+    {
+      "subject_id": "3565",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.18205057084560394
+    },
+    {
+      "subject_id": "3575",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.5830641388893127
+    },
+    {
+      "subject_id": "3591",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.08504088968038559
+    },
+    {
+      "subject_id": "3593",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.031660642474889755
+    },
+    {
+      "subject_id": "3759",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.02418644167482853
+    },
+    {
+      "subject_id": "3767",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0770810917019844
+    },
+    {
+      "subject_id": "3769",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.040000926703214645
+    },
+    {
+      "subject_id": "3806",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.24792365729808807
+    },
+    {
+      "subject_id": "3807",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.06507662683725357
+    },
+    {
+      "subject_id": "3824",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.06624205410480499
+    },
+    {
+      "subject_id": "3832",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.5121522545814514
+    },
+    {
+      "subject_id": "3857",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.005934280809015036
+    }
+  ],
+  "auc": 0.8035714285714286
+}

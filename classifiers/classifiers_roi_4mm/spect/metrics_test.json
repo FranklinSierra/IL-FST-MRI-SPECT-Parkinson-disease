@@ -1,0 +1,284 @@
+{
+  "n_subjects": 34,
+  "accuracy": 0.9117647058823529,
+  "balanced_accuracy": 0.925,
+  "f1_macro": 0.9110723626852659,
+  "confusion_matrix": [
+    [
+      14,
+      0
+    ],
+    [
+      3,
+      17
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.8235294117647058,
+      "recall": 1.0,
+      "f1-score": 0.9032258064516129,
+      "support": 14.0
+    },
+    "1": {
+      "precision": 1.0,
+      "recall": 0.85,
+      "f1-score": 0.918918918918919,
+      "support": 20.0
+    },
+    "accuracy": 0.9117647058823529,
+    "macro avg": {
+      "precision": 0.9117647058823529,
+      "recall": 0.925,
+      "f1-score": 0.9110723626852659,
+      "support": 34.0
+    },
+    "weighted avg": {
+      "precision": 0.9273356401384083,
+      "recall": 0.9117647058823529,
+      "f1-score": 0.9124570490794399,
+      "support": 34.0
+    }
+  },
+  "per_subject": [
+    {
+      "subject_id": "3107",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9954128861427307
+    },
+    {
+      "subject_id": "3108",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.22075620293617249
+    },
+    {
+      "subject_id": "3116",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9998452067375183
+    },
+    {
+      "subject_id": "3119",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9982119798660278
+    },
+    {
+      "subject_id": "3120",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9985884428024292
+    },
+    {
+      "subject_id": "3134",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9997632503509521
+    },
+    {
+      "subject_id": "3165",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0005014952621422708
+    },
+    {
+      "subject_id": "3166",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.09700382500886917
+    },
+    {
+      "subject_id": "3172",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0003749399329535663
+    },
+    {
+      "subject_id": "3182",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9859322905540466
+    },
+    {
+      "subject_id": "3185",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9959135055541992
+    },
+    {
+      "subject_id": "3188",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.01758161187171936
+    },
+    {
+      "subject_id": "3191",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0003515153075568378
+    },
+    {
+      "subject_id": "3305",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9256815314292908
+    },
+    {
+      "subject_id": "3320",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.00021440975251607597
+    },
+    {
+      "subject_id": "3332",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9151803255081177
+    },
+    {
+      "subject_id": "3361",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.004383367020636797
+    },
+    {
+      "subject_id": "3374",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.816901445388794
+    },
+    {
+      "subject_id": "3386",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9984375238418579
+    },
+    {
+      "subject_id": "3552",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9997650384902954
+    },
+    {
+      "subject_id": "3554",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0014395713806152344
+    },
+    {
+      "subject_id": "3559",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.00786008220165968
+    },
+    {
+      "subject_id": "3565",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.015153750777244568
+    },
+    {
+      "subject_id": "3575",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.999086856842041
+    },
+    {
+      "subject_id": "3591",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.7155390977859497
+    },
+    {
+      "subject_id": "3593",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9690361022949219
+    },
+    {
+      "subject_id": "3759",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0006355771911330521
+    },
+    {
+      "subject_id": "3767",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0011222095927223563
+    },
+    {
+      "subject_id": "3769",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.014507099986076355
+    },
+    {
+      "subject_id": "3806",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.02880168706178665
+    },
+    {
+      "subject_id": "3807",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0015668184496462345
+    },
+    {
+      "subject_id": "3824",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9988311529159546
+    },
+    {
+      "subject_id": "3832",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9982255101203918
+    },
+    {
+      "subject_id": "3857",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0003957761509809643
+    }
+  ],
+  "auc": 0.9857142857142858
+}

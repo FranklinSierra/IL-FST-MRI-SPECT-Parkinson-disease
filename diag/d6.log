@@ -1,0 +1,59 @@
+2026-08-26 12:11:38.482145: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-08-26 12:11:38.499572: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1787746298.519770   99174 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1787746298.526219   99174 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1787746298.541357   99174 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1787746298.541393   99174 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1787746298.541398   99174 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1787746298.541401   99174 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2026-08-26 12:11:38.545560: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1787746302.579735   99174 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 17629 MB memory:  -> device: 0, name: NVIDIA TITAN RTX, pci bus id: 0000:40:00.0, compute capability: 7.5
+TEST...
+I0000 00:00:1787746308.451241   99174 cuda_dnn.cc:529] Loaded cuDNN version 90300
+0 / 34
+TRAIN...
+0 / 147
+40 / 147
+80 / 147
+120 / 147
+
+  z | AUC clasif MRI | AUC clasif SPECT   (TEST, por slice individual)
+  0 |     0.673      |     0.825
+  6 |     0.580      |     0.957
+ 12 |     0.550      |     0.946
+ 18 |     0.471      |     0.907
+ 24 |     0.468      |     0.943
+ 30 |     0.611      |     0.986
+ 36 |     0.386      |     0.993
+ 42 |     0.332      |     0.946
+ 48 |     0.368      |     0.925
+ 54 |     0.621      |     0.871
+ 60 |     0.507      |     0.911
+ 66 |     0.282      |     0.857
+ 72 |     0.293      |     0.943
+ 78 |     0.593      |     0.943
+ 84 |     0.682      |     0.979
+ 90 |     0.668      |     0.964
+ 96 |     0.625      |     0.911
+102 |     0.525      |     0.954
+108 |     0.493      |     0.896
+
+=== AUC promediando probabilidad sobre ventanas de slices (TEST) ===
+ventana            MRI     SPECT
+z=0..15 (ACTUAL)     0.550   0.989
+z=18..47             0.454   0.989
+z=48..77             0.246   0.925
+z=78..112            0.707   0.950
+z=36..96             0.393   0.979
+z=18..112 (todo)     0.457   0.986
+
+=== sonda logistica sobre GAP(features) por ventana: cuanto INFORMA cada espacio ===
+ventana            MRI feat   SPECT feat   (train->TEST AUC)
+z=0..15 (ACTUAL)       0.518       0.982
+z=18..47               0.743       0.986
+z=48..77               0.596       0.989
+z=78..112              0.804       0.971
+z=36..96               0.732       0.993
+z=18..112 (todo)       0.779       0.996

@@ -1,0 +1,26 @@
+{
+  "mri_cls_on_mri_test": {
+    "ba": 0.5571428571428572,
+    "auc": 0.7214285714285714
+  },
+  "spect_cls_on_spect_test": {
+    "ba": 0.975,
+    "auc": 0.9928571428571429
+  },
+  "head_on_fspect_test": {
+    "ba": 0.975,
+    "auc": 0.9928571428571429
+  },
+  "head_on_fmri_test": {
+    "ba": 0.5,
+    "auc": 0.7107142857142857
+  },
+  "mri_cls_on_mri_train": {
+    "ba": 0.7590081363812475,
+    "auc": 0.9455637349864393
+  },
+  "spect_cls_on_spect_train": {
+    "ba": 1.0,
+    "auc": 1.0
+  }
+}

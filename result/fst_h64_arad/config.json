@@ -1,0 +1,29 @@
+{
+  "spect_root": "/workspace/IL-CLDM/data_rois/whole_Abeta_4mm",
+  "mri_root": "/workspace/IL-CLDM/data_rois/whole_MRI",
+  "spect_aae": "/workspace/IL-CLDM/result/exp_nm_s1_spect_rois_4mm/AAE.pth.tar",
+  "mri_xmodal": "/workspace/IL-CLDM/result/exp_nm_s1_mri_rois_4mm_xmodal_h64/phase1_mri/checkpoints/MRI_AAE.pth.tar",
+  "mobilenet3d": "/workspace/IL-CLDM/result/exp_nm_cls_spect_aae_mnet3d/best.pt",
+  "out_dir": "/workspace/IL-FST/result/fst_h64_arad",
+  "epochs": 200,
+  "batch_size": 2,
+  "lr": 0.0001,
+  "mse_weight": 0.2,
+  "ce_weight": 0.8,
+  "patience": 15,
+  "seed": 42,
+  "working_volume_shape": [
+    96,
+    112,
+    116
+  ],
+  "latent_h64_shape": [
+    64,
+    24,
+    28,
+    29
+  ],
+  "early_stop_metric": "val_balanced_accuracy",
+  "model": "FeatureTransferUNet_64to64",
+  "gpu": "6"
+}

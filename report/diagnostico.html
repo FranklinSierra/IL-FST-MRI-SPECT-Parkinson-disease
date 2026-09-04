@@ -1,0 +1,469 @@
+<title>Por qué falla el FST</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+
+<style>
+:root{
+  --ground:#EFF2F2; --surface:#FCFDFD; --surface-2:#E6EBEB;
+  --ink:#111719; --ink-2:#41525A; --ink-3:#6D8089;
+  --rule:#D2DADA; --rule-strong:#B4C0C0;
+  --accent:#0A6375; --accent-soft:#DDEDF0;
+  --bad:#9E362C; --bad-soft:#F6E3E0;
+  --warn:#8A5A14; --warn-soft:#F7EBD8;
+  --good:#25664E; --good-soft:#DEEDE6;
+  --measure:66ch;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0C1214; --surface:#141C1F; --surface-2:#1D272B;
+    --ink:#E2E9E9; --ink-2:#A3B4B9; --ink-3:#7C9096;
+    --rule:#263337; --rule-strong:#3A4A50;
+    --accent:#59B4C6; --accent-soft:#122A31;
+    --bad:#DE8074; --bad-soft:#2B1815;
+    --warn:#D6A45C; --warn-soft:#2A2013;
+    --good:#6FBF9C; --good-soft:#132922;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0C1214; --surface:#141C1F; --surface-2:#1D272B;
+  --ink:#E2E9E9; --ink-2:#A3B4B9; --ink-3:#7C9096;
+  --rule:#263337; --rule-strong:#3A4A50;
+  --accent:#59B4C6; --accent-soft:#122A31;
+  --bad:#DE8074; --bad-soft:#2B1815;
+  --warn:#D6A45C; --warn-soft:#2A2013;
+  --good:#6FBF9C; --good-soft:#132922;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Source Serif 4",Georgia,serif; font-size:17px; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px; margin:0 auto; padding:0 28px 96px}
+.col{max-width:var(--measure)}
+
+h1,h2,h3,.label,.tag,th,.num{font-family:"IBM Plex Sans",system-ui,sans-serif}
+code,.mono,td.n,th.n{font-family:"IBM Plex Mono",ui-monospace,monospace}
+
+/* ---------- cabecera ---------- */
+header{padding:64px 0 40px; border-bottom:1px solid var(--rule)}
+.eyebrow{
+  font-family:"IBM Plex Sans",sans-serif; font-size:12px; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin:0 0 18px
+}
+h1{
+  font-size:clamp(34px,5.2vw,52px); line-height:1.06; font-weight:600;
+  letter-spacing:-.021em; margin:0 0 20px; text-wrap:balance; max-width:19ch
+}
+.standfirst{font-size:20px; line-height:1.55; color:var(--ink-2); margin:0; max-width:60ch}
+
+/* ---------- veredicto ---------- */
+.verdict{display:grid; gap:14px; margin:36px 0 0}
+@media(min-width:760px){.verdict{grid-template-columns:1fr 1fr}}
+.vcard{
+  background:var(--surface); border:1px solid var(--rule);
+  border-left:3px solid var(--accent); padding:20px 22px; border-radius:3px
+}
+.vcard.bad{border-left-color:var(--bad)}
+.vcard h3{
+  font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink-3); margin:0 0 10px
+}
+.vcard p{margin:0; font-size:16px; line-height:1.5}
+.vcard strong{font-weight:600}
+
+/* ---------- secciones ---------- */
+section{padding:56px 0 0}
+h2{
+  font-size:13px; font-weight:600; letter-spacing:.13em; text-transform:uppercase;
+  color:var(--ink-3); margin:0 0 8px; padding-bottom:10px; border-bottom:1px solid var(--rule)
+}
+h2 + .lede{font-size:23px; line-height:1.36; font-weight:400; letter-spacing:-.012em;
+  margin:22px 0 20px; max-width:44ch; text-wrap:balance}
+p{margin:0 0 18px}
+.col p:last-child{margin-bottom:0}
+
+/* ---------- causas numeradas ---------- */
+.causes{list-style:none; margin:28px 0 0; padding:0; display:grid; gap:2px}
+.causes li{
+  background:var(--surface); border:1px solid var(--rule); border-radius:3px;
+  padding:22px 24px; display:grid; gap:12px; grid-template-columns:auto 1fr; align-items:start
+}
+.cnum{
+  font-family:"IBM Plex Mono",monospace; font-size:13px; font-weight:600;
+  color:var(--surface); background:var(--bad); width:26px; height:26px; border-radius:2px;
+  display:grid; place-items:center; margin-top:2px
+}
+.causes li.fixed .cnum{background:var(--accent)}
+.cbody h3{font-size:18px; font-weight:600; letter-spacing:-.01em; margin:0 0 8px; line-height:1.3}
+.cbody p{margin:0 0 10px; font-size:16px; color:var(--ink-2)}
+.cbody p:last-child{margin:0}
+.evidence{
+  font-family:"IBM Plex Mono",monospace; font-size:13.5px; line-height:1.6;
+  background:var(--surface-2); border-radius:2px; padding:11px 13px; color:var(--ink);
+  margin:0 0 10px; overflow-x:auto
+}
+.fix{font-size:15px; color:var(--ink-2); border-top:1px dashed var(--rule-strong); padding-top:10px}
+.fix b{font-family:"IBM Plex Sans",sans-serif; font-size:11px; font-weight:600;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:3px}
+
+/* ---------- tablas ---------- */
+.tscroll{overflow-x:auto; margin:26px 0; border:1px solid var(--rule); border-radius:3px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:15px}
+caption{
+  caption-side:top; text-align:left; font-family:"IBM Plex Sans",sans-serif;
+  font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink-3); padding:15px 18px 0
+}
+th{
+  text-align:left; font-size:11.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--ink-3); padding:14px 18px 9px; border-bottom:1px solid var(--rule-strong); white-space:nowrap
+}
+td{padding:11px 18px; border-bottom:1px solid var(--rule); vertical-align:baseline}
+tbody tr:last-child td{border-bottom:none}
+td.n,th.n{text-align:right; font-variant-numeric:tabular-nums; font-size:14.5px}
+tr.hl td{background:var(--accent-soft)}
+tr.dim td{color:var(--ink-3)}
+.pill{
+  display:inline-block; font-family:"IBM Plex Sans",sans-serif; font-size:11px; font-weight:600;
+  letter-spacing:.05em; padding:2px 8px; border-radius:2px; white-space:nowrap
+}
+.p-bad{background:var(--bad-soft); color:var(--bad)}
+.p-good{background:var(--good-soft); color:var(--good)}
+.p-warn{background:var(--warn-soft); color:var(--warn)}
+
+/* ---------- grafico z ---------- */
+figure{margin:30px 0}
+.chart{background:var(--surface); border:1px solid var(--rule); border-radius:3px; padding:24px 22px 18px; overflow-x:auto}
+figcaption{font-size:14.5px; color:var(--ink-2); margin-top:12px; max-width:62ch; line-height:1.5}
+.legend{display:flex; gap:20px; flex-wrap:wrap; margin-bottom:18px; font-family:"IBM Plex Sans",sans-serif; font-size:12.5px; color:var(--ink-2)}
+.legend span{display:flex; align-items:center; gap:7px}
+.swatch{width:12px; height:12px; border-radius:2px; flex:none}
+
+/* ---------- nota ---------- */
+.note{
+  background:var(--warn-soft); border:1px solid var(--rule); border-left:3px solid var(--warn);
+  border-radius:3px; padding:18px 22px; margin:28px 0; font-size:16px; line-height:1.55
+}
+.note b{font-family:"IBM Plex Sans",sans-serif; font-size:11px; font-weight:600;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--warn); display:block; margin-bottom:6px}
+.note p{margin:0}
+
+code{font-size:.88em; background:var(--surface-2); padding:1.5px 5px; border-radius:2px}
+.caveat{font-size:15px; color:var(--ink-3); border-left:2px solid var(--rule-strong); padding-left:14px}
+
+/* ---------- pasos ---------- */
+ol.steps{margin:24px 0 0; padding-left:0; list-style:none; counter-reset:s; display:grid; gap:16px}
+ol.steps li{counter-increment:s; padding-left:38px; position:relative; font-size:16px; line-height:1.55}
+ol.steps li::before{
+  content:counter(s); position:absolute; left:0; top:1px;
+  font-family:"IBM Plex Mono",monospace; font-size:12px; font-weight:600; color:var(--accent);
+  border:1px solid var(--accent); width:24px; height:24px; border-radius:2px; display:grid; place-items:center
+}
+footer{margin-top:64px; padding-top:24px; border-top:1px solid var(--rule);
+  font-family:"IBM Plex Sans",sans-serif; font-size:13px; color:var(--ink-3)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+</style>
+
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">IL-FST · diagnóstico ARAD · 26 ago 2026</p>
+  <h1>Ninguna UNet puede traducir lo que no está en la entrada</h1>
+  <p class="standfirst">Los dos enfoques de transferencia de deep features MRI→SPECT no fallan por la UNet. Fallan por un rango de slices sin cerebro, una pérdida que nunca aprendió, y una validación que era el test.</p>
+
+  <div class="verdict">
+    <div class="vcard bad">
+      <h3>Lo que estaba pasando</h3>
+      <p>El MobileNet de MRI recibía <strong>láminas en blanco</strong>. En <code>z∈[0,15]</code> el volumen MRI tiene una fracción de señal de 0.000–0.030: el cerebro empieza en z=18. Su propio <code>config.json</code> ya lo decía — test BA <strong>0.511</strong>.</p>
+    </div>
+    <div class="vcard">
+      <h3>Dónde quedó</h3>
+      <p>Enfoque B pasó de AUC <strong>0.557 → 0.796</strong> (BA 0.496 → 0.696) con el rango corregido. Enfoque A llegó a su techo real, AUC 0.668, y ahí se queda: su cuello de botella es el encoder, no el traductor.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <h2>Punto de partida</h2>
+  <div class="col">
+    <p class="lede">Primero verifiqué que cada componente congelado hace lo que dices que hace. Casi todos sí.</p>
+    <p>La conclusión de esta tabla es la que orienta todo lo demás: las tres compuertas del lado SPECT están perfectas, la reconstrucción de la head es exacta, y el lado MRI está en el azar. El problema nunca estuvo en «juntarlo todo».</p>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <caption>Compuertas congeladas, medidas sobre el test oficial (34 sujetos)</caption>
+      <thead><tr><th>Componente</th><th class="n">BA</th><th class="n">AUC</th><th>Veredicto</th></tr></thead>
+      <tbody>
+        <tr><td>Clasificador SPECT sobre SPECT real</td><td class="n">0.975</td><td class="n">0.993</td><td><span class="pill p-good">correcto</span></td></tr>
+        <tr><td>Head SPECT reconstruida sobre <code>f_spect</code></td><td class="n">0.975</td><td class="n">0.993</td><td><span class="pill p-good">idéntica</span></td></tr>
+        <tr><td>MobileNet3D sobre <code>decode(h64_spect)</code></td><td class="n">0.975</td><td class="n">1.000</td><td><span class="pill p-good">correcto</span></td></tr>
+        <tr class="hl"><td><b>Clasificador MRI sobre MRI real</b></td><td class="n">0.557</td><td class="n">0.721</td><td><span class="pill p-bad">azar</span></td></tr>
+        <tr class="dim"><td>&nbsp;&nbsp;↳ el mismo, sobre train</td><td class="n">0.759</td><td class="n">0.946</td><td><span class="pill p-warn">memoriza</span></td></tr>
+        <tr class="hl"><td><b>Sonda lineal sobre <code>h64_mri</code> xmodal</b></td><td class="n">0.543</td><td class="n">0.639</td><td><span class="pill p-bad">azar</span></td></tr>
+        <tr class="dim"><td>&nbsp;&nbsp;↳ la misma, sobre train</td><td class="n">—</td><td class="n">0.953</td><td><span class="pill p-warn">memoriza</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>Los dos encoders de MRI que usas como entrada congelada — el MobileNet fold3 y el AAE xmodal h64 — tienen AUC ≈0.95 en train y ≈0.64–0.72 en test. Los «resultados sobresalientes» del contrastive learning se midieron en un holdout <em>interno del train</em>. En el test real esa señal no existe.</p>
+  </div>
+</section>
+
+<section>
+  <h2>La evidencia</h2>
+  <div class="col">
+    <p class="lede">Por qué el encoder de MRI no aprendió nada: nunca vio un cerebro.</p>
+  </div>
+
+  <figure>
+    <div class="chart">
+      <div class="legend">
+        <span><i class="swatch" style="background:var(--bad)"></i> MRI</span>
+        <span><i class="swatch" style="background:var(--accent)"></i> SPECT</span>
+        <span><i class="swatch" style="background:var(--surface-2);border:1px solid var(--rule-strong)"></i> rango <code>z∈[0,15]</code> usado por el enfoque B</span>
+      </div>
+      <svg viewBox="0 0 900 300" width="900" style="max-width:100%;height:auto" role="img" aria-label="Fracción de vóxeles con señal por slice axial. El MRI es cero hasta z=18; el SPECT tiene señal desde z=0.">
+        <rect x="60" y="20" width="105" height="230" fill="var(--surface-2)"/>
+        <text x="70" y="38" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--ink-3)">rango usado</text>
+        <g stroke="var(--rule)" stroke-width="1">
+          <line x1="60" y1="250" x2="880" y2="250"/><line x1="60" y1="192.5" x2="880" y2="192.5"/>
+          <line x1="60" y1="135" x2="880" y2="135"/><line x1="60" y1="77.5" x2="880" y2="77.5"/>
+          <line x1="60" y1="20" x2="880" y2="20"/>
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--ink-3)" text-anchor="end">
+          <text x="52" y="254">0</text><text x="52" y="196">0.25</text>
+          <text x="52" y="139">0.5</text><text x="52" y="81">0.75</text><text x="52" y="24">1.0</text>
+        </g>
+        <polyline fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"
+          points="60,169 89,132 118,98 147,81 176,79 205,66 234,48 263,42 292,36 321,28 350,28 379,27 408,25 437,22 466,21 495,21 524,20 553,20 582,20 611,20 640,20 669,20 698,20 727,20 756,20 785,20 814,20 843,20 872,20"/>
+        <polyline fill="none" stroke="var(--bad)" stroke-width="2.5" stroke-linejoin="round"
+          points="60,250 89,250 118,249 147,243 176,235 205,214 234,196 263,180 292,154 321,132 350,113 379,101 408,81 437,61 466,49 495,43 524,39 553,41 582,49 611,56 640,57 669,60 698,68 727,70 756,61 785,49 814,41 843,42 872,47"/>
+        <circle cx="176" cy="235" r="4" fill="var(--bad)"/>
+        <text x="186" y="232" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="600" fill="var(--bad)">z=18: empieza el cerebro en MRI</text>
+        <g font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--ink-3)" text-anchor="middle">
+          <text x="60" y="272">0</text><text x="205" y="272">20</text><text x="350" y="272">40</text>
+          <text x="495" y="272">60</text><text x="640" y="272">80</text><text x="785" y="272">100</text><text x="872" y="272">112</text>
+        </g>
+        <text x="470" y="292" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="var(--ink-3)" text-anchor="middle">slice axial (z)</text>
+      </svg>
+    </div>
+    <figcaption>Fracción de vóxeles por encima del 20% del máximo, promediada sobre 5 sujetos. En la ventana que usa el enfoque B el SPECT tiene 35–74% de señal (por eso su clasificador llega a 0.975) mientras el MRI tiene 0–3%.</figcaption>
+  </figure>
+
+  <div class="col">
+    <p>El rango <code>[0,15]</code> viene del pipeline CoCoLIT, donde es razonable para SPECT. Se aplicó a MRI sin comprobar que ahí no hay anatomía. Todo lo que ese MobileNet aprendió de MRI son artefactos de fondo — y como la normalización z-score es por volumen, incluso una lámina vacía codifica algo del volumen entero. De ahí el AUC 0.95 en train y 0.72 en test.</p>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <caption>Información de etiqueta en las features, por ventana axial — sonda logística, muestreo z a paso 6</caption>
+      <thead><tr><th>Ventana</th><th class="n">features MRI</th><th class="n">features SPECT</th></tr></thead>
+      <tbody>
+        <tr class="hl"><td><code>z=0..15</code> — la que usabas</td><td class="n">0.518</td><td class="n">0.982</td></tr>
+        <tr><td><code>z=18..47</code></td><td class="n">0.743</td><td class="n">0.986</td></tr>
+        <tr><td><code>z=48..77</code></td><td class="n">0.596</td><td class="n">0.989</td></tr>
+        <tr><td><code>z=78..112</code></td><td class="n">0.804</td><td class="n">0.971</td></tr>
+        <tr><td><code>z=18..112</code> — la corregida</td><td class="n">0.779</td><td class="n">0.996</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <p>Mover la ventana sube la información disponible en MRI de <strong>0.518 (azar) a ~0.80</strong>, y el SPECT no se degrada. Esta sola línea es la diferencia entre un experimento imposible y uno viable.</p>
+    <p class="caveat">Esta tabla es el barrido exploratorio inicial: muestrea <code>z</code> a paso 6, así que cada ventana se mide con pocos cortes. La sección «Elegir la ventana» repite la medida sobre exactamente los cortes que usó cada entrenamiento, y ahí los valores se mueven algunas centésimas. La conclusión — <code>z=0..15</code> no sirve — no depende del muestreo: se apoya en la fracción de señal del gráfico de arriba, que es una medida física de los volúmenes.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Causas raíz</h2>
+  <div class="col">
+    <p class="lede">Cinco fallos independientes, todos verificados. Los cuatro primeros afectan a los dos enfoques.</p>
+  </div>
+
+  <ol class="causes">
+    <li>
+      <span class="cnum">1</span>
+      <div class="cbody">
+        <h3>La MSE nunca aprendió nada, y estaba oculta</h3>
+        <p>Se reportaba cruda, sin referencia. Comparada con el predictor trivial (la media constante del train):</p>
+        <div class="evidence">A · mse_h64  = 0.27–0.45   media constante = 0.101  → 3–4× PEOR<br>B · mse_feat = 2.28        media constante = 2.16   → PEOR</div>
+        <p>Ambos traductores eran peores que devolver una constante. Nadie podía verlo porque el número no se comparaba con nada.</p>
+        <p class="fix"><b>Arreglo</b>Normalizar la MSE por la del predictor de media del train, de modo que <code>1.0</code> signifique exactamente «igual que devolver una constante» y cualquier valor mayor sea una alarma inmediata. Ojo: mis entrenadores v2 la normalizan por <code>var(target)</code>, que es una referencia más laxa — en la tabla de resultados he reconvertido todo a la referencia estricta.</p>
+      </div>
+    </li>
+    <li>
+      <span class="cnum">2</span>
+      <div class="cbody">
+        <h3><code>validation.txt</code> es idéntico a <code>test.txt</code></h3>
+        <p>El enfoque A hizo early-stopping directamente sobre el conjunto de test, durante 16 épocas, y aun así se quedó en BA 0.571 con <code>best_epoch=1</code>. El enfoque B usaba un holdout de 15 sujetos, donde un solo sujeto vale 6 puntos de BA: la curva de validación era ruido puro.</p>
+        <p class="fix"><b>Arreglo</b>CV 5-fold a nivel sujeto sobre los 147 de <code>train.txt</code>, con <code>test.txt</code> intocable hasta el final. Early stopping sobre AUC, que es continua, en vez de BA, que es escalonada.</p>
+      </div>
+    </li>
+    <li>
+      <span class="cnum">3</span>
+      <div class="cbody">
+        <h3>La head SPECT solo consume el promedio espacial</h3>
+        <p>Es <code>GAP → fc1 → Dropout → fc2 → softmax</code>. El primer paso colapsa el mapa 8×8. Lo verifiqué:</p>
+        <div class="evidence">| head(mapa 8×8) − head(GAP replicado) | = 3.6e−7</div>
+        <p>Tu UNet optimiza 65 536 valores por muestra de los cuales la head solo usa 1 024 promedios. El <strong>98.4% de su capacidad</strong> se gasta en detalle espacial que se descarta inmediatamente después.</p>
+        <p class="fix"><b>Arreglo</b>La MSE va sobre <code>GAP(f)</code>, no sobre el mapa. La UNet sigue operando en 8×8 como querías, pero se la supervisa donde importa.</p>
+      </div>
+    </li>
+    <li>
+      <span class="cnum">4</span>
+      <div class="cbody">
+        <h3>El traductor arrancaba por debajo de la identidad</h3>
+        <p>Sin conexión residual, la UNet parte de ruido. Pero pasar <code>f_mri</code> tal cual a la head SPECT — sin entrenar nada — ya da AUC 0.711 en B y 0.646 en A. Tu enfoque B entrenado daba <strong>0.557</strong>: destruía información en vez de añadirla.</p>
+        <p>Además, en B la salida era una <code>Conv2D</code> lineal mientras el target es ReLU6 — vive en [0,6] con 79% de ceros. La head congelada recibía una distribución imposible.</p>
+        <p class="fix"><b>Arreglo</b>Residual con la última conv inicializada a cero: la salida en el paso 0 es <em>exactamente</em> la identidad (verificado, <code>max|y−x| = 0</code>). Salida ReLU6 en B, ReLU en A. Solo puede mejorar desde el baseline.</p>
+      </div>
+    </li>
+    <li>
+      <span class="cnum">5</span>
+      <div class="cbody">
+        <h3>Solo en A: el CE atacaba al decoder congelado</h3>
+        <p>Con <code>ce_weight = 0.8</code>, el gradiente atraviesa un decoder generativo congelado hasta una MobileNet3D congelada. Eso es exactamente el escenario de un ataque adversarial: el <code>train_ce</code> bajó de 0.48 a 0.15 mientras las reconstrucciones eran basura.</p>
+        <div class="evidence">PSNR = 15.3    SSIM = 0.14    (el AAE real da PSNR ~47 / SSIM ~0.996)</div>
+        <p>La UNet aprendió a producir artefactos que engañan al clasificador, no traducciones válidas. Y los artefactos no generalizan.</p>
+        <p class="fix"><b>Arreglo</b><code>ce_weight = 0.05</code> y MSE dominante. Regla general: el peso del CE debe fijarse por cuánta libertad adversarial le da la cadena congelada. En B, donde el CE solo cruza <code>GAP→fc1→fc2</code>, puede ir alto; en A, donde cruza un generador, no.</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h2>Resultados</h2>
+  <div class="col">
+    <p class="lede">Enfoque B es recuperable. Enfoque A llegó a su techo, y su techo es bajo.</p>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <caption>Test oficial, 34 sujetos, nivel sujeto</caption>
+      <thead><tr><th>Configuración</th><th class="n">BA</th><th class="n">AUC</th><th class="n">MSE ÷ media</th></tr></thead>
+      <tbody>
+        <tr class="dim"><td><b>A</b> · <code>fst_h64_arad</code> — tu versión</td><td class="n">0.571</td><td class="n">0.636</td><td class="n">4.46×</td></tr>
+        <tr><td><b>A</b> · <code>fst_h64_v2</code> — arreglada</td><td class="n">0.582</td><td class="n">0.668</td><td class="n">2.94×</td></tr>
+        <tr class="dim"><td><b>B</b> · <code>fst_clsfeat_mnet2d_arad</code> — tu versión</td><td class="n">0.496</td><td class="n">0.557</td><td class="n">1.06×</td></tr>
+        <tr><td><b>B</b> · v2, rango original <code>z=0..15</code></td><td class="n">0.754</td><td class="n">0.757</td><td class="n">1.44×</td></tr>
+        <tr class="hl"><td><b>B</b> · v2, <b>rango corregido</b> <code>z=18..112</code></td><td class="n">0.696</td><td class="n">0.796</td><td class="n">3.80×</td></tr>
+        <tr class="dim"><td>referencia · head SPECT sobre SPECT real</td><td class="n">0.975</td><td class="n">0.993</td><td class="n">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>La última columna es la que hay que mirar con honestidad. Está definida como <em>MSE del modelo dividida entre la MSE del predictor trivial</em> — la media por posición del train. Un valor de 1.0× significa «igual que devolver una constante»; por encima de 1.0×, peor que una constante.</p>
+    <p><strong>Ningún run baja de 1.0×. Ni siquiera mis versiones corregidas.</strong> No es un fallo de optimización: es que <strong>la reconstrucción de features MRI→SPECT no existe en este dataset</strong>. Lo comprobé construyendo el mejor traductor lineal posible (ridge con barrido completo de regularización): alcanza R² ≈ +0.01 en B y R² negativo en A. No hay ninguna función que lleve <code>f_mri</code> a <code>f_spect</code>.</p>
+    <p>Lo que sí mejora es la relación señal/ruido de esa MSE. En A pasa de 4.46× a 2.94×, que es la diferencia entre «ruido adversarial» y «cerca de la identidad». Y en B la mejor configuración por AUC es justamente la que <em>más</em> abandona la MSE (3.80×), lo cual es coherente con lo que viene:</p>
+    <p>Lo que sí funciona es el camino del CE: el traductor no necesita reconstruir la muestra, solo moverla al lado correcto del hiperplano de la head. Por eso invertir los pesos de la receta ARAD en B (0.8 MSE / 0.2 CE → MSE baja, CE dominante) es la decisión correcta aquí, aunque contradiga el paper.</p>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <caption>Barrido de configuraciones sobre el rango corregido — umbral por cuantil, ensemble de 5 folds</caption>
+      <thead><tr><th>Configuración</th><th>Ventana</th><th class="n">BA</th><th class="n">AUC</th></tr></thead>
+      <tbody>
+        <tr class="hl"><td><code>z_all</code> — 64 ch, l2 1e-2, MSE 0.3</td><td><code>z=18..112</code></td><td class="n">0.696</td><td class="n">0.796</td></tr>
+        <tr><td><code>z_all_mse0</code> — la misma, <b>sin término MSE</b></td><td><code>z=18..112</code></td><td class="n">0.636</td><td class="n">0.779</td></tr>
+        <tr><td><code>z_all_w128</code> — 128 ch, l2 3e-3</td><td><code>z=18..112</code></td><td class="n">0.671</td><td class="n">0.741</td></tr>
+        <tr><td><code>z_mid</code></td><td><code>z=18..47</code></td><td class="n">0.589</td><td class="n">0.721</td></tr>
+        <tr><td><code>z_sup</code></td><td><code>z=78..112</code></td><td class="n">0.636</td><td class="n">0.604</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>Dos lecturas de este barrido. La primera confirma la sección anterior: <strong>quitar la MSE por completo apenas cambia nada</strong> (0.779 frente a 0.796). El término de reconstrucción de la receta ARAD no está aportando en este dataset — todo el trabajo lo hace el CE.</p>
+    <p>La segunda es contraintuitiva. La sonda por-slice decía que <code>z=78..112</code> era la ventana con más información en MRI (0.804), pero entrenar solo ahí da el peor resultado del barrido. Con 147 sujetos, el volumen de slices y la diversidad del ensemble pesan más que la calidad marginal de cada lámina. Usa el rango completo.</p>
+  </div>
+
+  <div class="note">
+    <b>Cómo leer estos números</b>
+    <p>Con n=34 el IC 95% bootstrap de la BA es de ±0.15. Concretamente: B corregido da BA 0.696 [0.53, 0.85] y AUC 0.796 [0.62, 0.93]. Eso significa que las cinco configuraciones de la tabla de arriba <em>no son distinguibles entre sí</em>, y que la BA 0.754 del rango original tampoco es distinguible de la 0.696 del corregido — no elijas configuración por esas décimas. Lo que sí es sólido es la separación entre tu versión (AUC 0.557) y la corregida (0.796), y sobre todo el diagnóstico de las láminas vacías, que no depende del tamaño del test.</p>
+  </div>
+
+  <div class="col">
+    <p>Un detalle que apareció al final y conviene que conozcas: con el rango corregido, el AUC de test es 0.796 pero la BA con umbral fijo en 0.5 daba 0.500 — el modelo predecía clase 1 a todo el mundo. <strong>Cada fold produce probabilidades en una escala distinta</strong> porque la head congelada opera en una región saturada. Agrupar las predicciones out-of-fold en un vector y buscar un umbral global mezcla escalas incompatibles. La solución es un umbral por cuantil que iguale la prevalencia del train — invariante a escala y sin mirar ninguna etiqueta de test.</p>
+  </div>
+</section>
+
+<section>
+  <h2>El techo del enfoque A</h2>
+  <div class="col">
+    <p class="lede">A no tiene un problema de traductor. Tiene un problema de encoder.</p>
+    <p>Construí el mejor traductor lineal posible en el espacio h64 (PCA a 100 componentes que retiene el 95% de la varianza, más ridge con barrido de regularización) y lo pasé por el decoder AAE y la MobileNet3D:</p>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <caption>Oráculo lineal en h64 — el mejor traductor alcanzable, test</caption>
+      <thead><tr><th>Traductor</th><th class="n">R²</th><th class="n">AUC</th></tr></thead>
+      <tbody>
+        <tr><td>Ridge en PCA-100, mejor α</td><td class="n">−0.087</td><td class="n">0.632</td></tr>
+        <tr><td>Identidad — sin entrenar nada</td><td class="n">—</td><td class="n">0.646</td></tr>
+        <tr class="hl"><td>Techo: <code>decode(h64_spect)</code> real</td><td class="n">1.0</td><td class="n">1.000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>El mejor traductor lineal es <em>peor que no hacer nada</em>, y su R² es negativo. El AAE xmodal de MRI simplemente no codifica información de amiloide que sobreviva al test. Ninguna arquitectura de UNet cambia eso. Mi versión arreglada llega a 0.668 — es decir, ya está en su techo.</p>
+    <p>Si quieres subir A, la única palanca real es el encoder de MRI, no el traductor. Que su contrastive learning diera 0.96 en holdout interno y 0.64 en test es el problema a atacar.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Elegir la ventana</h2>
+  <div class="col">
+    <p class="lede">Dónde cortas importa. Cuántos cortes tomas, también.</p>
+    <p>Una vez identificado que <code>z=0..15</code> está vacío en MRI, la pregunta natural es qué ventana usar. Probé seis, todas evaluadas igual: media de probabilidades por sujeto sobre el test oficial y umbral por cuantil del prior de train. La columna «sonda» es una regresión logística sobre <code>GAP(features)</code> de esa ventana, calculada sobre exactamente los mismos cortes que usó cada entrenamiento. Mide cuánta información de etiqueta es linealmente accesible, sin ninguna UNet de por medio. Es una <em>referencia</em>, no una cota: la UNet puede superarla, y en <code>z=18..47</code> lo hace.</p>
+  </div>
+
+  <div class="note">
+    <b>Qué es y qué no es cada columna</b>
+    <p>Los dos clasificadores MobileNet <strong>nunca se reentrenaron</strong>: siguen siendo los originales, entrenados sobre <code>z=0..15</code>. Lo único que cambia entre filas es qué cortes se les da de entrada para extraer features. La «sonda» es una regresión logística sobre esas features; «AUC» y «BA» sí son la UNet de transferencia entrenada de verdad, 5 folds por fila.</p>
+  </div>
+
+  <div class="tscroll">
+    <table>
+      <caption>Ventanas axiales — sonda lineal frente a resultado de la UNet</caption>
+      <thead><tr><th>Ventana</th><th class="n">cortes</th><th class="n">sonda MRI</th><th class="n">sonda SPECT</th><th class="n">AUC</th><th class="n">BA</th></tr></thead>
+      <tbody>
+        <tr class="dim"><td><code>z=0..15</code> — la original</td><td class="n">16</td><td class="n">0.518</td><td class="n">0.982</td><td class="n">0.557</td><td class="n">0.514</td></tr>
+        <tr><td><code>z=70..85</code></td><td class="n">16</td><td class="n">0.746</td><td class="n">1.000</td><td class="n">0.668</td><td class="n">0.636</td></tr>
+        <tr><td><code>z=18..47</code></td><td class="n">10</td><td class="n">0.671</td><td class="n">0.982</td><td class="n">0.721</td><td class="n">0.696</td></tr>
+        <tr><td><code>z=78..112</code></td><td class="n">12</td><td class="n">0.811</td><td class="n">0.975</td><td class="n">0.686</td><td class="n">0.636</td></tr>
+        <tr><td><code>z=62..93</code></td><td class="n">32</td><td class="n">0.764</td><td class="n">0.996</td><td class="n">0.764</td><td class="n">0.636</td></tr>
+        <tr class="hl"><td><code>z=18..112</code> — paso 3</td><td class="n">32</td><td class="n">0.750</td><td class="n">0.996</td><td class="n">0.789</td><td class="n">0.636</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>La columna de la sonda y la columna de la UNet no están ordenadas igual, y esa discrepancia es el hallazgo. <code>z=78..112</code> tiene la mejor sonda de MRI de toda la tabla (0.811) y sin embargo la UNet entrenada ahí rinde 0.686. Al revés, <code>z=18..112</code> tiene menos información linealmente accesible (0.750) y da el mejor AUC (0.789). La información disponible y la información extraída no van juntas.</p>
+    <p>La causa es el número de cortes, y lo aislé con una comparación controlada. <code>z=70..85</code> y <code>z=62..93</code> cubren la misma zona anatómica y tienen prácticamente la misma información disponible (sonda 0.746 frente a 0.764). Lo único que cambia es que la segunda tiene 32 cortes en vez de 16:</p>
+    <div class="evidence">z=70..85  (16 cortes)   AUC 0.668   folds [0.41, 0.54, 0.66, 0.68, 0.39]<br>z=62..93  (32 cortes)   AUC 0.764   folds [0.78, 0.65, 0.82, 0.61, 0.74]</div>
+    <p>Con 16 cortes hay 2112 muestras y dos de los cinco folds acaban <strong>por debajo del azar</strong>. El early stopping sobre folds de 29 sujetos está eligiendo épocas esencialmente al azar. Duplicar los cortes no añade información — la sonda lo confirma — pero estabiliza el entrenamiento lo suficiente para recuperar casi un décimo de AUC.</p>
+    <p><strong>Usa 32 cortes como mínimo.</strong> Si quieres el mejor número, <code>z=18..112</code> a paso 3. Si prefieres una ventana compacta y anatómicamente defendible, <code>z=62..93</code> cuesta 0.025 de AUC. Lo que no debes hacer es elegir por la BA: con n=34 las cinco ventanas corregidas son indistinguibles entre sí en esa métrica.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Qué hacer ahora</h2>
+  <ol class="steps">
+    <li><b>Regenera el caché de slices con <code>z∈[18,112]</code> y al menos 32 cortes.</b> Es el cambio de mayor impacto y no toca ningún modelo. <code>scripts/cache_clsfeat_z.py</code>, con <code>FST_ZMIN</code> / <code>FST_ZMAX</code> / <code>FST_ZSTEP</code>.</li>
+    <li><b>Reentrena los dos clasificadores MobileNet con ese rango.</b> Los tratas como compuertas congeladas, pero el de MRI se entrenó sobre láminas vacías: su BA de test es 0.511. Reentrenarlo sobre anatomía real debería subir el techo de B muy por encima de 0.80, porque el 0.80 actual se obtiene con un encoder que sigue siendo el entrenado en blanco. Este es, con diferencia, el paso de mayor retorno que queda.</li>
+    <li><b>Nunca vuelvas a reportar una MSE cruda.</b> Divide por <code>var(target)</code> del train. Si el número no baja de 1.0, el modelo no ha aprendido.</li>
+    <li><b>Sustituye <code>validation.txt</code> por la CV 5-fold.</b> Ya está implementada en ambos entrenadores v2.</li>
+    <li><b>Para A, ataca el encoder xmodal.</b> Mide siempre su AUC en el test oficial, no en un holdout del train — es la métrica que decide si el experimento es viable.</li>
+  </ol>
+</section>
+
+<footer>
+  IL-FST · diagnóstico y corrección · datos ROI 4 mm, 147 train / 34 test · scripts en <code>scripts/train_fst_clsfeat_v2.py</code>, <code>scripts/train_fst_h64_v2.py</code>, <code>scripts/calibrate_folds.py</code>; diagnósticos en <code>diag/</code>
+</footer>
+
+</div>

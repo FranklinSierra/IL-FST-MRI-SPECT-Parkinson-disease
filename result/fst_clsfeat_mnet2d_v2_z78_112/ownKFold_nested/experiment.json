@@ -1,0 +1,12 @@
+{
+  "experiment": "ownKFold_nested",
+  "gpu": 7,
+  "splits_source": "/workspace/IL-FST/result/fst_clsfeat_mnet2d_v2_z78_112/ownKFold/files",
+  "inner_val_source": "/workspace/IL-FST/result/fst_clsfeat_mnet2d_v2_z78_112/ownKFold/models/fold{k}",
+  "does_not_modify": [
+    "result/fst_clsfeat_mnet2d_v2_z78_112/ownKFold/",
+    "data/feat_cache_z78_112/",
+    "classifiers/classifiers_roi_4mm/"
+  ],
+  "protocol": "Per fold: train MRI+SPECT on train_fit, early-stop on val_holdout, cache features, train UNet, eval testFold."
+}

@@ -1,0 +1,25 @@
+# Modelos
+*.keras
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Embeddings
+**/embeddings/
+*.npy
+
+# Caches (obligatorio: archivos >100 MB)
+data/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Extra
+logs/
+core

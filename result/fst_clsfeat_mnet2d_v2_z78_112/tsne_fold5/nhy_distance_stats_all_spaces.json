@@ -1,0 +1,60 @@
+{
+  "spaces": {
+    "mri": {
+      "space": "GAP(mri) subject-mean, Euclidean distance to control centroid in-space",
+      "n_control": 14,
+      "n_pd_with_nhy": 20,
+      "nhy_counts": {
+        "2": 11,
+        "1": 9
+      },
+      "mean_dist_control": 4.546800477164132,
+      "mean_dist_pd_nhy1": 6.2299586402045355,
+      "mean_dist_pd_nhy2": 5.976643172177401,
+      "pearson_r": -0.08138418626319338,
+      "pearson_p": 0.7330340190822711,
+      "spearman_rho": 0.026144349280800106,
+      "spearman_p": 0.9128767266442555,
+      "mannwhitney_nhy1_vs_nhy2_U": 48.0,
+      "mannwhitney_nhy1_vs_nhy2_p": 0.9394400080349974
+    },
+    "translated": {
+      "space": "GAP(translated) subject-mean, Euclidean distance to control centroid in-space",
+      "n_control": 14,
+      "n_pd_with_nhy": 20,
+      "nhy_counts": {
+        "2": 11,
+        "1": 9
+      },
+      "mean_dist_control": 4.035176992416382,
+      "mean_dist_pd_nhy1": 5.724628845850627,
+      "mean_dist_pd_nhy2": 5.540579752488569,
+      "pearson_r": -0.05447031109548285,
+      "pearson_p": 0.8195823335094096,
+      "spearman_rho": 0.008714783093600034,
+      "spearman_p": 0.9709118454617213,
+      "mannwhitney_nhy1_vs_nhy2_U": 49.0,
+      "mannwhitney_nhy1_vs_nhy2_p": 1.0
+    },
+    "spect": {
+      "space": "GAP(spect) subject-mean, Euclidean distance to control centroid in-space",
+      "n_control": 14,
+      "n_pd_with_nhy": 20,
+      "nhy_counts": {
+        "2": 11,
+        "1": 9
+      },
+      "mean_dist_control": 5.930278982434954,
+      "mean_dist_pd_nhy1": 14.617732789781359,
+      "mean_dist_pd_nhy2": 15.933676632967861,
+      "pearson_r": 0.1625805198165483,
+      "pearson_p": 0.4934422336371233,
+      "spearman_rho": 0.2701582759016011,
+      "spearman_p": 0.2493333110993579,
+      "mannwhitney_nhy1_vs_nhy2_U": 34.0,
+      "mannwhitney_nhy1_vs_nhy2_p": 0.2544505826463366,
+      "interpretation_hint": "If early PD (NHY1) sits closer to controls, expect smaller mean distance for NHY1 than NHY2 and positive correlation distance~NHY."
+    }
+  },
+  "interpretation_hint": "Compare whether translated GAP(UNet(f_mri)) preserves control-vs-PD separation and NHY ordering seen in SPECT GAP."
+}

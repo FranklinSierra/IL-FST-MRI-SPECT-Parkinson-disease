@@ -1,0 +1,133 @@
+{
+  "n_subjects": 181,
+  "folds": 5,
+  "seed": 42,
+  "stratification": [
+    "control",
+    "pd_nhy1",
+    "pd_nhy2"
+  ],
+  "pool_counts": {
+    "pd_nhy1": 51,
+    "control": 72,
+    "pd_nhy2": 58
+  },
+  "nhy_csv": "/workspace/IL-FST/data/nhy_distribution.csv",
+  "per_fold": [
+    {
+      "fold": 1,
+      "n_train": 144,
+      "n_test": 37,
+      "train_stratum": {
+        "pd_nhy1": 40,
+        "control": 58,
+        "pd_nhy2": 46
+      },
+      "test_stratum": {
+        "pd_nhy2": 12,
+        "pd_nhy1": 11,
+        "control": 14
+      },
+      "train_label": {
+        "1": 86,
+        "0": 58
+      },
+      "test_label": {
+        "1": 23,
+        "0": 14
+      }
+    },
+    {
+      "fold": 2,
+      "n_train": 145,
+      "n_test": 36,
+      "train_stratum": {
+        "pd_nhy1": 41,
+        "control": 57,
+        "pd_nhy2": 47
+      },
+      "test_stratum": {
+        "pd_nhy2": 11,
+        "pd_nhy1": 10,
+        "control": 15
+      },
+      "train_label": {
+        "1": 88,
+        "0": 57
+      },
+      "test_label": {
+        "1": 21,
+        "0": 15
+      }
+    },
+    {
+      "fold": 3,
+      "n_train": 145,
+      "n_test": 36,
+      "train_stratum": {
+        "pd_nhy1": 41,
+        "control": 57,
+        "pd_nhy2": 47
+      },
+      "test_stratum": {
+        "control": 15,
+        "pd_nhy1": 10,
+        "pd_nhy2": 11
+      },
+      "train_label": {
+        "1": 88,
+        "0": 57
+      },
+      "test_label": {
+        "0": 15,
+        "1": 21
+      }
+    },
+    {
+      "fold": 4,
+      "n_train": 145,
+      "n_test": 36,
+      "train_stratum": {
+        "pd_nhy1": 41,
+        "pd_nhy2": 46,
+        "control": 58
+      },
+      "test_stratum": {
+        "control": 14,
+        "pd_nhy2": 12,
+        "pd_nhy1": 10
+      },
+      "train_label": {
+        "1": 87,
+        "0": 58
+      },
+      "test_label": {
+        "0": 14,
+        "1": 22
+      }
+    },
+    {
+      "fold": 5,
+      "n_train": 145,
+      "n_test": 36,
+      "train_stratum": {
+        "control": 58,
+        "pd_nhy2": 46,
+        "pd_nhy1": 41
+      },
+      "test_stratum": {
+        "pd_nhy1": 10,
+        "control": 14,
+        "pd_nhy2": 12
+      },
+      "train_label": {
+        "0": 58,
+        "1": 87
+      },
+      "test_label": {
+        "1": 22,
+        "0": 14
+      }
+    }
+  ]
+}

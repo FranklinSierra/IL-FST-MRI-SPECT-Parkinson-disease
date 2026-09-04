@@ -1,0 +1,62 @@
+{
+  "fold": 3,
+  "best_epoch": 4,
+  "val_auc_early_stop": 0.8703703703703703,
+  "threshold_source": "inner_val_max_BA",
+  "n_train": 145,
+  "n_fit": 130,
+  "n_val": 15,
+  "n_test": 36,
+  "val_strata": {
+    "pd_nhy2": 5,
+    "control": 6,
+    "pd_nhy1": 4
+  },
+  "test_strata": {
+    "control": 15,
+    "pd_nhy1": 10,
+    "pd_nhy2": 11
+  },
+  "var_gap_spect_trainfold": 0.34190833568573,
+  "class_weights_trainfold": {
+    "0": 1.2719298245614035,
+    "1": 0.8238636363636364
+  },
+  "val": {
+    "n_subjects": 15,
+    "threshold": 0.4058941900730133,
+    "accuracy": 0.8666666666666667,
+    "balanced_accuracy": 0.8611111111111112,
+    "f1": 0.8611111111111112,
+    "roc_auc": 0.8703703703703703,
+    "confusion_matrix": [
+      [
+        5,
+        1
+      ],
+      [
+        1,
+        8
+      ]
+    ]
+  },
+  "test": {
+    "n_subjects": 36,
+    "threshold": 0.4058941900730133,
+    "accuracy": 0.6111111111111112,
+    "balanced_accuracy": 0.6,
+    "f1": 0.6,
+    "roc_auc": 0.6603174603174603,
+    "confusion_matrix": [
+      [
+        8,
+        7
+      ],
+      [
+        7,
+        14
+      ]
+    ],
+    "mse_rel_test": 1.3124521970748901
+  }
+}

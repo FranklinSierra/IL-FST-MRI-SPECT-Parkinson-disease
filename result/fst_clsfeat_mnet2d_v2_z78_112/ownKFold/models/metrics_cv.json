@@ -1,0 +1,102 @@
+{
+  "n_subjects": 181,
+  "threshold_policy": "per_fold_inner_val_max_BA",
+  "accuracy": 0.8895027624309392,
+  "balanced_accuracy": 0.8846839959225281,
+  "f1": 0.8846839959225281,
+  "roc_auc": 0.9698012232415902,
+  "confusion_matrix": [
+    [
+      62,
+      10
+    ],
+    [
+      10,
+      99
+    ]
+  ],
+  "per_fold": [
+    {
+      "fold": 1,
+      "best_epoch": 3,
+      "threshold": 0.4496668577194214,
+      "val_auc": 0.8518518518518519,
+      "val_ba": 0.8055555555555556,
+      "test_auc": 0.9782608695652174,
+      "test_ba": 0.8990683229813665,
+      "test_acc": 0.8918918918918919,
+      "n_test": 37,
+      "test_strata": {
+        "pd_nhy2": 12,
+        "pd_nhy1": 11,
+        "control": 14
+      }
+    },
+    {
+      "fold": 2,
+      "best_epoch": 6,
+      "threshold": 0.4597647488117218,
+      "val_auc": 0.925925925925926,
+      "val_ba": 0.8611111111111112,
+      "test_auc": 0.9365079365079365,
+      "test_ba": 0.9190476190476191,
+      "test_acc": 0.9166666666666666,
+      "n_test": 36,
+      "test_strata": {
+        "pd_nhy2": 11,
+        "pd_nhy1": 10,
+        "control": 15
+      }
+    },
+    {
+      "fold": 3,
+      "best_epoch": 1,
+      "threshold": 0.6025993824005127,
+      "val_auc": 0.9814814814814815,
+      "val_ba": 0.9444444444444444,
+      "test_auc": 0.9682539682539684,
+      "test_ba": 0.8809523809523809,
+      "test_acc": 0.8611111111111112,
+      "n_test": 36,
+      "test_strata": {
+        "control": 15,
+        "pd_nhy1": 10,
+        "pd_nhy2": 11
+      }
+    },
+    {
+      "fold": 4,
+      "best_epoch": 1,
+      "threshold": 0.02548634260892868,
+      "val_auc": 0.888888888888889,
+      "val_ba": 0.8333333333333333,
+      "test_auc": 0.9772727272727273,
+      "test_ba": 0.8571428571428572,
+      "test_acc": 0.8888888888888888,
+      "n_test": 36,
+      "test_strata": {
+        "control": 14,
+        "pd_nhy2": 12,
+        "pd_nhy1": 10
+      }
+    },
+    {
+      "fold": 5,
+      "best_epoch": 14,
+      "threshold": 0.1949680894613266,
+      "val_auc": 1.0,
+      "val_ba": 1.0,
+      "test_auc": 0.9837662337662338,
+      "test_ba": 0.8571428571428572,
+      "test_acc": 0.8888888888888888,
+      "n_test": 36,
+      "test_strata": {
+        "pd_nhy1": 10,
+        "control": 14,
+        "pd_nhy2": 12
+      }
+    }
+  ],
+  "test_ba_mean": 0.8826708074534162,
+  "test_auc_mean": 0.9688123470732167
+}

@@ -1,0 +1,19 @@
+=> Loading checkpoint: /workspace/IL-CLDM/result/exp_nm_s1_spect_rois_4mm/AAE.pth.tar
+=> Loading checkpoint: /workspace/IL-CLDM/result/exp_nm_s1_mri_rois_4mm_xmodal_h64/phase1_mri/checkpoints/MRI_AAE.pth.tar
+h64 train (147, 64, 24, 28, 29) test (34, 64, 24, 28, 29)
+ajustando PCA...
+var explicada mri 0.952 spect 0.949
+
+=== ORACULO A: PCA100 + Ridge, decode, MobileNet3D  (TEST 34 suj) ===
+alpha     R2_te   | AUC     BA@0.5   BA@thr(train)
+       1 -0.0958 |  0.6321  0.5536   0.5821
+      10 -0.0958 |  0.6321  0.5536   0.5821
+     100 -0.0957 |  0.6321  0.5536   0.5821
+    1000 -0.0948 |  0.6286  0.5536   0.5821
+   10000 -0.0868 |  0.6214  0.5536   0.5821
+
+=== referencias ===
+techo   decode(h64_spect)  AUC=1.0000 BA=0.9750
+identidad decode(h64_mri)  AUC=0.6464 BA@0.5=0.5321 BA@thr=0.5321
+media constante            AUC=0.5839
+OK

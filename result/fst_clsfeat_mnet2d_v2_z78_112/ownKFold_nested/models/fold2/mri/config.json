@@ -1,0 +1,33 @@
+{
+  "framework": "keras",
+  "architecture": "MobileNet",
+  "modality": "mri",
+  "feature_layer": "conv_pw_13_relu",
+  "feature_shape": [
+    8,
+    8,
+    1024
+  ],
+  "head_layers": [
+    "fc1",
+    "fc2",
+    "predictions"
+  ],
+  "num_classes": 2,
+  "activation_out": "softmax",
+  "height": 256,
+  "width": 256,
+  "slice_axis": 2,
+  "slice_range": [
+    78,
+    112
+  ],
+  "n_slices_per_subject": 35,
+  "preprocess": "mri_zscore_clip3sigma_to_unit",
+  "best_epoch": 13,
+  "best_val_balanced_accuracy": 0.8611111111111112,
+  "n_train_subjects": 130,
+  "n_val_subjects": 15,
+  "n_test_subjects": 36,
+  "checkpoint": "/workspace/IL-FST/result/fst_clsfeat_mnet2d_v2_z78_112/ownKFold_nested/models/fold2/mri/model.keras"
+}

@@ -1,0 +1,20 @@
+{
+  "feat_cache": "/workspace/IL-FST/data/feat_cache_z78_112",
+  "out_dir": "/workspace/IL-FST/result/fst_clsfeat_mnet2d_v2_z78_112",
+  "spect_classifier": "/workspace/IL-FST/models/classifiers_roi_4mm/spect/model.keras",
+  "train_list": "/workspace/IL-CLDM/data_info/train.txt",
+  "test_list": "/workspace/IL-CLDM/data_info/test.txt",
+  "folds": 5,
+  "epochs": 60,
+  "batch_size": 32,
+  "lr": 0.0003,
+  "patience": 12,
+  "mse_weight": 0.3,
+  "ce_weight": 1.0,
+  "mid_channels": 192,
+  "l2": 0.0001,
+  "dropout": 0.2,
+  "seed": 42,
+  "z_min": 78,
+  "z_max": 112
+}

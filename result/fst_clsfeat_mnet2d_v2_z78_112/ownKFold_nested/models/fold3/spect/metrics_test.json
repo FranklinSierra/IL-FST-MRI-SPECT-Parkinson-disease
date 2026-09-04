@@ -1,0 +1,298 @@
+{
+  "n_subjects": 36,
+  "accuracy": 0.8888888888888888,
+  "balanced_accuracy": 0.9047619047619048,
+  "f1_macro": 0.8885448916408669,
+  "confusion_matrix": [
+    [
+      15,
+      0
+    ],
+    [
+      4,
+      17
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.7894736842105263,
+      "recall": 1.0,
+      "f1-score": 0.8823529411764706,
+      "support": 15.0
+    },
+    "1": {
+      "precision": 1.0,
+      "recall": 0.8095238095238095,
+      "f1-score": 0.8947368421052632,
+      "support": 21.0
+    },
+    "accuracy": 0.8888888888888888,
+    "macro avg": {
+      "precision": 0.8947368421052632,
+      "recall": 0.9047619047619048,
+      "f1-score": 0.8885448916408669,
+      "support": 36.0
+    },
+    "weighted avg": {
+      "precision": 0.912280701754386,
+      "recall": 0.8888888888888888,
+      "f1-score": 0.8895768833849329,
+      "support": 36.0
+    }
+  },
+  "per_subject": [
+    {
+      "subject_id": "3112",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.3059922754764557
+    },
+    {
+      "subject_id": "3114",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.050726935267448425
+    },
+    {
+      "subject_id": "3122",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9857020974159241
+    },
+    {
+      "subject_id": "3125",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.999852180480957
+    },
+    {
+      "subject_id": "3126",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9997941255569458
+    },
+    {
+      "subject_id": "3131",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9790005087852478
+    },
+    {
+      "subject_id": "3134",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9996973276138306
+    },
+    {
+      "subject_id": "3150",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.5535866022109985
+    },
+    {
+      "subject_id": "3151",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.00038270652294158936
+    },
+    {
+      "subject_id": "3154",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9455771446228027
+    },
+    {
+      "subject_id": "3161",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.00213129841722548
+    },
+    {
+      "subject_id": "3172",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.005304617341607809
+    },
+    {
+      "subject_id": "3320",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0026593231596052647
+    },
+    {
+      "subject_id": "3322",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9987169504165649
+    },
+    {
+      "subject_id": "3327",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.32591086626052856
+    },
+    {
+      "subject_id": "3354",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.8586339950561523
+    },
+    {
+      "subject_id": "3365",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.985394299030304
+    },
+    {
+      "subject_id": "3368",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.2492697834968567
+    },
+    {
+      "subject_id": "3369",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0010463061043992639
+    },
+    {
+      "subject_id": "3380",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9999463558197021
+    },
+    {
+      "subject_id": "3386",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9994078278541565
+    },
+    {
+      "subject_id": "3556",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.27340543270111084
+    },
+    {
+      "subject_id": "3574",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9805453419685364
+    },
+    {
+      "subject_id": "3584",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.957531750202179
+    },
+    {
+      "subject_id": "3586",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9999863505363464
+    },
+    {
+      "subject_id": "3591",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.7517445087432861
+    },
+    {
+      "subject_id": "3769",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0625019297003746
+    },
+    {
+      "subject_id": "3805",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 3.476771598798223e-05
+    },
+    {
+      "subject_id": "3817",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.02968047745525837
+    },
+    {
+      "subject_id": "3824",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9994897246360779
+    },
+    {
+      "subject_id": "3829",
+      "label": 1,
+      "pred_class": 1,
+      "n_slices": 35,
+      "mean_prob_pd": 0.9103338718414307
+    },
+    {
+      "subject_id": "3837",
+      "label": 1,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.357617050409317
+    },
+    {
+      "subject_id": "3854",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.031530361622571945
+    },
+    {
+      "subject_id": "3857",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0002272874116897583
+    },
+    {
+      "subject_id": "3859",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.007041835226118565
+    },
+    {
+      "subject_id": "4018",
+      "label": 0,
+      "pred_class": 0,
+      "n_slices": 35,
+      "mean_prob_pd": 0.0023412867449223995
+    }
+  ],
+  "auc": 0.9968253968253968
+}

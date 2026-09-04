@@ -1,0 +1,22 @@
+{
+  "transfer": "/workspace/IL-FST/result/fst_clsfeat_mnet2d_v2_z78_112/transfer_fold5.keras",
+  "feat_cache": "/workspace/IL-FST/data/feat_cache_z78_112",
+  "z_range": [
+    78,
+    112
+  ],
+  "n_test_slices": 1190,
+  "n_test_subjects": 34,
+  "feature": "GAP(conv_pw_13_relu) dim=1024",
+  "tsne": {
+    "slice_perplexity": 30.0,
+    "subject_perplexity": 8.0,
+    "seed": 42,
+    "joint_embedding": true
+  },
+  "panels": [
+    "MRI GAP(f_mri)",
+    "Translated GAP(UNet_fold5(f_mri))",
+    "SPECT GAP(f_spect)"
+  ]
+}

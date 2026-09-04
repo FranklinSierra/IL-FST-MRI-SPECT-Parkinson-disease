@@ -1,0 +1,55 @@
+{
+  "n_subjects": 147,
+  "threshold": 0.4228927195072174,
+  "accuracy": 0.9659863945578231,
+  "balanced_accuracy": 0.9659046881053855,
+  "f1": 0.9645081848471679,
+  "roc_auc": 0.9854707477721814,
+  "confusion_matrix": [
+    [
+      56,
+      2
+    ],
+    [
+      3,
+      86
+    ]
+  ],
+  "per_fold": [
+    {
+      "fold": 1,
+      "best_epoch": 2,
+      "val_auc": 0.9953703703703703,
+      "test_auc": 0.7107142857142856,
+      "test_mse_rel": 1.5999610424041748
+    },
+    {
+      "fold": 2,
+      "best_epoch": 2,
+      "val_auc": 1.0,
+      "test_auc": 0.7392857142857143,
+      "test_mse_rel": 1.4631381034851074
+    },
+    {
+      "fold": 3,
+      "best_epoch": 1,
+      "val_auc": 1.0,
+      "test_auc": 0.7678571428571429,
+      "test_mse_rel": 1.527373194694519
+    },
+    {
+      "fold": 4,
+      "best_epoch": 1,
+      "val_auc": 1.0,
+      "test_auc": 0.7357142857142858,
+      "test_mse_rel": 1.4670002460479736
+    },
+    {
+      "fold": 5,
+      "best_epoch": 1,
+      "val_auc": 0.9803921568627452,
+      "test_auc": 0.7642857142857143,
+      "test_mse_rel": 1.451278805732727
+    }
+  ]
+}
