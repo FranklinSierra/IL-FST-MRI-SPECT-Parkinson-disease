@@ -1,0 +1,29 @@
+{
+  "baseline_mri_mobilenet_roi_slices_z78_112": {
+    "path": "/workspace/IL-FST/classifiers/classifiers_roi_4mm/mri/metrics_test.json",
+    "n_subjects": 34,
+    "balanced_accuracy": 0.6,
+    "auc": 0.8035714285714286,
+    "accuracy": 0.5294117647058824,
+    "f1_macro": 0.48484848484848486,
+    "note": "Existing Keras MobileNet on ROI axial slices z=[78,112]. Not retrained.",
+    "balanced_accuracy_check": 0.6
+  },
+  "brainiac_frozen_mri_whole": {
+    "path": "/workspace/IL-FST/classifiers/brainiac_vitb_frozen/mri_whole/metrics_test.json",
+    "n_subjects": 34,
+    "balanced_accuracy": 0.5428571428571429,
+    "auc": 0.5678571428571428,
+    "accuracy": 0.5882352941176471,
+    "f1_macro": 0.5296442687747036
+  },
+  "brainiac_frozen_mri_roi_4mm": {
+    "path": "/workspace/IL-FST/classifiers/brainiac_vitb_frozen/mri_roi_4mm/metrics_test.json",
+    "n_subjects": 34,
+    "balanced_accuracy": 0.5,
+    "auc": 0.6214285714285714,
+    "accuracy": 0.4117647058823529,
+    "f1_macro": 0.2916666666666667
+  },
+  "roi_comparison_note": "brainiac_frozen_mri_roi_4mm sees the full 3D ROI patch. The MobileNet baseline sees only 35 axial slices."
+}

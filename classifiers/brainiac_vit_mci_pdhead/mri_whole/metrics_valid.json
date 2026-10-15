@@ -1,0 +1,138 @@
+{
+  "n_subjects": 15,
+  "accuracy": 0.6,
+  "balanced_accuracy": 0.5,
+  "f1_macro": 0.375,
+  "confusion_matrix": [
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      9
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 6.0
+    },
+    "1": {
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1-score": 0.75,
+      "support": 9.0
+    },
+    "accuracy": 0.6,
+    "macro avg": {
+      "precision": 0.3,
+      "recall": 0.5,
+      "f1-score": 0.375,
+      "support": 15.0
+    },
+    "weighted avg": {
+      "precision": 0.36,
+      "recall": 0.6,
+      "f1-score": 0.45,
+      "support": 15.0
+    }
+  },
+  "per_subject": [
+    {
+      "subject_id": "3115",
+      "label": 0,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6039250493049622
+    },
+    {
+      "subject_id": "3128",
+      "label": 1,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6050463914871216
+    },
+    {
+      "subject_id": "3354",
+      "label": 1,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6032931208610535
+    },
+    {
+      "subject_id": "3365",
+      "label": 1,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6047486066818237
+    },
+    {
+      "subject_id": "3389",
+      "label": 0,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6018320918083191
+    },
+    {
+      "subject_id": "3564",
+      "label": 1,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6024274826049805
+    },
+    {
+      "subject_id": "3577",
+      "label": 1,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6029475927352905
+    },
+    {
+      "subject_id": "3586",
+      "label": 1,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6043592095375061
+    },
+    {
+      "subject_id": "3779",
+      "label": 0,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6063189506530762
+    },
+    {
+      "subject_id": "3812",
+      "label": 0,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6037788391113281
+    },
+    {
+      "subject_id": "3823",
+      "label": 1,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6029843688011169
+    },
+    {
+      "subject_id": "3830",
+      "label": 1,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6062276363372803
+    },
+    {
+      "subject_id": "3835",
+      "label": 1,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6012676358222961
+    },
+    {
+      "subject_id": "3854",
+      "label": 0,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6061762571334839
+    },
+    {
+      "subject_id": "4067",
+      "label": 0,
+      "pred_class": 1,
+      "pred_prob_pd": 0.6029820442199707
+    }
+  ],
+  "decision": "argmax",
+  "score_for_auc": "softmax[:,1]",
+  "auc": 0.42592592592592593
+}

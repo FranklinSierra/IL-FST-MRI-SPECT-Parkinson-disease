@@ -1,0 +1,252 @@
+{
+  "n_subjects": 34,
+  "accuracy": 0.4117647058823529,
+  "balanced_accuracy": 0.5,
+  "f1_macro": 0.2916666666666667,
+  "confusion_matrix": [
+    [
+      14,
+      0
+    ],
+    [
+      20,
+      0
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.4117647058823529,
+      "recall": 1.0,
+      "f1-score": 0.5833333333333334,
+      "support": 14.0
+    },
+    "1": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 20.0
+    },
+    "accuracy": 0.4117647058823529,
+    "macro avg": {
+      "precision": 0.20588235294117646,
+      "recall": 0.5,
+      "f1-score": 0.2916666666666667,
+      "support": 34.0
+    },
+    "weighted avg": {
+      "precision": 0.1695501730103806,
+      "recall": 0.4117647058823529,
+      "f1-score": 0.24019607843137258,
+      "support": 34.0
+    }
+  },
+  "per_subject": [
+    {
+      "subject_id": "3107",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3618311583995819
+    },
+    {
+      "subject_id": "3108",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3515198528766632
+    },
+    {
+      "subject_id": "3116",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35152462124824524
+    },
+    {
+      "subject_id": "3119",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3600408136844635
+    },
+    {
+      "subject_id": "3120",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35323259234428406
+    },
+    {
+      "subject_id": "3134",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3553653061389923
+    },
+    {
+      "subject_id": "3165",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3506472706794739
+    },
+    {
+      "subject_id": "3166",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35990315675735474
+    },
+    {
+      "subject_id": "3172",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35459810495376587
+    },
+    {
+      "subject_id": "3182",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3502916097640991
+    },
+    {
+      "subject_id": "3185",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3521275818347931
+    },
+    {
+      "subject_id": "3188",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35103902220726013
+    },
+    {
+      "subject_id": "3191",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3544267416000366
+    },
+    {
+      "subject_id": "3305",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3570610284805298
+    },
+    {
+      "subject_id": "3320",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.36208584904670715
+    },
+    {
+      "subject_id": "3332",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3592137396335602
+    },
+    {
+      "subject_id": "3361",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35924020409584045
+    },
+    {
+      "subject_id": "3374",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3585965633392334
+    },
+    {
+      "subject_id": "3386",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35164231061935425
+    },
+    {
+      "subject_id": "3552",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.36047184467315674
+    },
+    {
+      "subject_id": "3554",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3584527373313904
+    },
+    {
+      "subject_id": "3559",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35789254307746887
+    },
+    {
+      "subject_id": "3565",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3626158833503723
+    },
+    {
+      "subject_id": "3575",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35733363032341003
+    },
+    {
+      "subject_id": "3591",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3717478811740875
+    },
+    {
+      "subject_id": "3593",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3525179624557495
+    },
+    {
+      "subject_id": "3759",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35182568430900574
+    },
+    {
+      "subject_id": "3767",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3514993488788605
+    },
+    {
+      "subject_id": "3769",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3524382710456848
+    },
+    {
+      "subject_id": "3806",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35121721029281616
+    },
+    {
+      "subject_id": "3807",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3524985909461975
+    },
+    {
+      "subject_id": "3824",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35452476143836975
+    },
+    {
+      "subject_id": "3832",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35579603910446167
+    },
+    {
+      "subject_id": "3857",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3539257049560547
+    }
+  ],
+  "decision": "argmax",
+  "score_for_auc": "softmax[:,1]",
+  "auc": 0.6214285714285714
+}

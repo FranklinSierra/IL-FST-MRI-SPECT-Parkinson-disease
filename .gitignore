@@ -5,6 +5,7 @@
 *.pth
 *.ckpt
 *.onnx
+*.safetensors
 
 # Embeddings
 **/embeddings/

@@ -1,0 +1,5914 @@
+{
+  "description": "Header and nonzero-outside-crop audit of the MRI NIfTIs used by brainiac_vitb_frozen. The whole-brain crop is the IL-CLDM border trim, not the striatal ROI.",
+  "fields": {
+    "whole": {
+      "field": "whole",
+      "volume_root": "/workspace/IL-CLDM/data/whole_MRI",
+      "n_files": 181,
+      "shapes": {
+        "(182, 218, 182)": 181
+      },
+      "zooms_mm": {
+        "(1.0, 1.0, 1.0)": 181
+      },
+      "axcodes": {
+        "LAS": 181
+      },
+      "dtypes": {
+        "float32": 181
+      },
+      "reference_affine": [
+        [
+          -1.0,
+          -0.0,
+          0.0,
+          90.0
+        ],
+        [
+          -0.0,
+          1.0,
+          -0.0,
+          -126.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -72.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "max_abs_affine_diff_vs_first": 0.0,
+      "crop_index": "data[10:170, 18:210, 10:170]",
+      "crop_result_shape": [
+        160,
+        192,
+        160
+      ],
+      "native_shape_expected": [
+        182,
+        218,
+        182
+      ],
+      "nonzero_outside_crop": {
+        "n_subjects": 181,
+        "mean_frac": 0.0006925059795583348,
+        "min_frac": 0.0,
+        "max_frac": 0.003504524086851869,
+        "n_with_any_outside": 156
+      },
+      "subjects": [
+        {
+          "id": "3102",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1674135,
+          "n_nonzero_outside_crop": 1062,
+          "frac_nonzero_outside_crop": 0.000634357444292127,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3104",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1608829,
+          "n_nonzero_outside_crop": 564,
+          "frac_nonzero_outside_crop": 0.0003505655355541204,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3105",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1676532,
+          "n_nonzero_outside_crop": 571,
+          "frac_nonzero_outside_crop": 0.0003405840150978329,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3106",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1540673,
+          "n_nonzero_outside_crop": 454,
+          "frac_nonzero_outside_crop": 0.0002946764173838316,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3107",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1737705,
+          "n_nonzero_outside_crop": 3245,
+          "frac_nonzero_outside_crop": 0.00186740557229219,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3108",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1428271,
+          "n_nonzero_outside_crop": 20,
+          "frac_nonzero_outside_crop": 1.4002944819295498e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3111",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1666668,
+          "n_nonzero_outside_crop": 1357,
+          "frac_nonzero_outside_crop": 0.0008141993486405211,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3112",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1365330,
+          "n_nonzero_outside_crop": 56,
+          "frac_nonzero_outside_crop": 4.10157251360477e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3113",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1523434,
+          "n_nonzero_outside_crop": 2,
+          "frac_nonzero_outside_crop": 1.3128235289484151e-06,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3114",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1407789,
+          "n_nonzero_outside_crop": 215,
+          "frac_nonzero_outside_crop": 0.00015272175020546402,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3115",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1730258,
+          "n_nonzero_outside_crop": 202,
+          "frac_nonzero_outside_crop": 0.00011674559516557646,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3116",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1572347,
+          "n_nonzero_outside_crop": 265,
+          "frac_nonzero_outside_crop": 0.00016853786091746925,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3118",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1596013,
+          "n_nonzero_outside_crop": 1211,
+          "frac_nonzero_outside_crop": 0.0007587657494017906,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3119",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1750909,
+          "n_nonzero_outside_crop": 1865,
+          "frac_nonzero_outside_crop": 0.0010651610106521812,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3120",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1445132,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3122",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1592372,
+          "n_nonzero_outside_crop": 903,
+          "frac_nonzero_outside_crop": 0.0005670785469726923,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3123",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1783965,
+          "n_nonzero_outside_crop": 2076,
+          "frac_nonzero_outside_crop": 0.0011636999604812874,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3124",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1721475,
+          "n_nonzero_outside_crop": 1131,
+          "frac_nonzero_outside_crop": 0.0006569947283579489,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3125",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1706958,
+          "n_nonzero_outside_crop": 483,
+          "frac_nonzero_outside_crop": 0.0002829595104273216,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3126",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1721091,
+          "n_nonzero_outside_crop": 3833,
+          "frac_nonzero_outside_crop": 0.0022270757327764773,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3127",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1663734,
+          "n_nonzero_outside_crop": 735,
+          "frac_nonzero_outside_crop": 0.00044177735142757196,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3128",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1458761,
+          "n_nonzero_outside_crop": 1522,
+          "frac_nonzero_outside_crop": 0.001043351172673248,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3129",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1850973,
+          "n_nonzero_outside_crop": 2881,
+          "frac_nonzero_outside_crop": 0.0015564786736489403,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3130",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1804300,
+          "n_nonzero_outside_crop": 4593,
+          "frac_nonzero_outside_crop": 0.002545585545640969,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3131",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1800927,
+          "n_nonzero_outside_crop": 2312,
+          "frac_nonzero_outside_crop": 0.0012837832960469803,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3132",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1625754,
+          "n_nonzero_outside_crop": 575,
+          "frac_nonzero_outside_crop": 0.00035368204537709885,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3134",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1692794,
+          "n_nonzero_outside_crop": 476,
+          "frac_nonzero_outside_crop": 0.00028119192293923537,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3150",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1483826,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3151",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1558846,
+          "n_nonzero_outside_crop": 457,
+          "frac_nonzero_outside_crop": 0.00029316558531118533,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3154",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1617159,
+          "n_nonzero_outside_crop": 466,
+          "frac_nonzero_outside_crop": 0.00028815966766409487,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3157",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1342271,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3160",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1832091,
+          "n_nonzero_outside_crop": 2516,
+          "frac_nonzero_outside_crop": 0.0013732942304721762,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3161",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1747096,
+          "n_nonzero_outside_crop": 2683,
+          "frac_nonzero_outside_crop": 0.0015356912270419027,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3165",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1539079,
+          "n_nonzero_outside_crop": 8,
+          "frac_nonzero_outside_crop": 5.197913817289431e-06,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3166",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1769982,
+          "n_nonzero_outside_crop": 3780,
+          "frac_nonzero_outside_crop": 0.0021356149384570014,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3167",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1624973,
+          "n_nonzero_outside_crop": 1282,
+          "frac_nonzero_outside_crop": 0.0007889361854012344,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3168",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1576751,
+          "n_nonzero_outside_crop": 856,
+          "frac_nonzero_outside_crop": 0.0005428885093461174,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3169",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1746017,
+          "n_nonzero_outside_crop": 642,
+          "frac_nonzero_outside_crop": 0.00036769401443399464,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3171",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1627515,
+          "n_nonzero_outside_crop": 452,
+          "frac_nonzero_outside_crop": 0.0002777240148324286,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3172",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1717991,
+          "n_nonzero_outside_crop": 959,
+          "frac_nonzero_outside_crop": 0.0005582101419623269,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3173",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1569681,
+          "n_nonzero_outside_crop": 6,
+          "frac_nonzero_outside_crop": 3.8224327108501664e-06,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3174",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1639743,
+          "n_nonzero_outside_crop": 882,
+          "frac_nonzero_outside_crop": 0.0005378891692173713,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3175",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1532942,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3176",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1887570,
+          "n_nonzero_outside_crop": 5992,
+          "frac_nonzero_outside_crop": 0.0031744518084097545,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3178",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1621319,
+          "n_nonzero_outside_crop": 1524,
+          "frac_nonzero_outside_crop": 0.0009399754150787106,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3181",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1526068,
+          "n_nonzero_outside_crop": 169,
+          "frac_nonzero_outside_crop": 0.00011074211634081836,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3182",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1671539,
+          "n_nonzero_outside_crop": 356,
+          "frac_nonzero_outside_crop": 0.00021297738192169012,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3184",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1454526,
+          "n_nonzero_outside_crop": 3,
+          "frac_nonzero_outside_crop": 2.0625275863064667e-06,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3185",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1513003,
+          "n_nonzero_outside_crop": 56,
+          "frac_nonzero_outside_crop": 3.701248444319013e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3188",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1526107,
+          "n_nonzero_outside_crop": 1,
+          "frac_nonzero_outside_crop": 6.552620491223747e-07,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3190",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1600139,
+          "n_nonzero_outside_crop": 1268,
+          "frac_nonzero_outside_crop": 0.0007924311575431885,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3191",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1424705,
+          "n_nonzero_outside_crop": 552,
+          "frac_nonzero_outside_crop": 0.00038744862971632724,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3300",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1652381,
+          "n_nonzero_outside_crop": 829,
+          "frac_nonzero_outside_crop": 0.0005017002737262169,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3301",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1686660,
+          "n_nonzero_outside_crop": 1018,
+          "frac_nonzero_outside_crop": 0.0006035596978644184,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3305",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1962606,
+          "n_nonzero_outside_crop": 6878,
+          "frac_nonzero_outside_crop": 0.003504524086851869,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3307",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1902750,
+          "n_nonzero_outside_crop": 4825,
+          "frac_nonzero_outside_crop": 0.0025358034423860203,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3308",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1833409,
+          "n_nonzero_outside_crop": 1970,
+          "frac_nonzero_outside_crop": 0.0010745011069543129,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3309",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1419460,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3310",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1440230,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3311",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1709654,
+          "n_nonzero_outside_crop": 1729,
+          "frac_nonzero_outside_crop": 0.0010113157399099467,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3314",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1346469,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3316",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1726109,
+          "n_nonzero_outside_crop": 1781,
+          "frac_nonzero_outside_crop": 0.0010318004251179966,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3318",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1604489,
+          "n_nonzero_outside_crop": 51,
+          "frac_nonzero_outside_crop": 3.178582090621999e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3320",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1554499,
+          "n_nonzero_outside_crop": 1256,
+          "frac_nonzero_outside_crop": 0.0008079773611948287,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3321",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1357718,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3322",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1513169,
+          "n_nonzero_outside_crop": 1512,
+          "frac_nonzero_outside_crop": 0.0009992274491481123,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3323",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1959091,
+          "n_nonzero_outside_crop": 5206,
+          "frac_nonzero_outside_crop": 0.002657354865087941,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3325",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1686224,
+          "n_nonzero_outside_crop": 2332,
+          "frac_nonzero_outside_crop": 0.0013829716573835978,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3327",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1592984,
+          "n_nonzero_outside_crop": 1660,
+          "frac_nonzero_outside_crop": 0.001042069474646324,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3328",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1624837,
+          "n_nonzero_outside_crop": 1134,
+          "frac_nonzero_outside_crop": 0.0006979161602056084,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3332",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1633719,
+          "n_nonzero_outside_crop": 999,
+          "frac_nonzero_outside_crop": 0.000611488266954109,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3350",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1720579,
+          "n_nonzero_outside_crop": 593,
+          "frac_nonzero_outside_crop": 0.00034465142257344766,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3352",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1737647,
+          "n_nonzero_outside_crop": 2126,
+          "frac_nonzero_outside_crop": 0.0012234936094615305,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3353",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1525907,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3354",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1791846,
+          "n_nonzero_outside_crop": 3679,
+          "frac_nonzero_outside_crop": 0.00205318983885892,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3355",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1585589,
+          "n_nonzero_outside_crop": 73,
+          "frac_nonzero_outside_crop": 4.6039673585021084e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3357",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1720226,
+          "n_nonzero_outside_crop": 2676,
+          "frac_nonzero_outside_crop": 0.0015556095536284186,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3358",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1783072,
+          "n_nonzero_outside_crop": 2852,
+          "frac_nonzero_outside_crop": 0.00159948672852246,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3359",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1632778,
+          "n_nonzero_outside_crop": 1312,
+          "frac_nonzero_outside_crop": 0.0008035385092155823,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3360",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1752943,
+          "n_nonzero_outside_crop": 561,
+          "frac_nonzero_outside_crop": 0.00032003322412651184,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3361",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1648217,
+          "n_nonzero_outside_crop": 1014,
+          "frac_nonzero_outside_crop": 0.0006152102544749872,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3364",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1620199,
+          "n_nonzero_outside_crop": 65,
+          "frac_nonzero_outside_crop": 4.0118528649875724e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3365",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1590332,
+          "n_nonzero_outside_crop": 46,
+          "frac_nonzero_outside_crop": 2.8924777970889098e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3366",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1661471,
+          "n_nonzero_outside_crop": 628,
+          "frac_nonzero_outside_crop": 0.00037797830958229183,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3367",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1577040,
+          "n_nonzero_outside_crop": 937,
+          "frac_nonzero_outside_crop": 0.0005941510678232638,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3368",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1648511,
+          "n_nonzero_outside_crop": 943,
+          "frac_nonzero_outside_crop": 0.000572031366487697,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3369",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1528961,
+          "n_nonzero_outside_crop": 1259,
+          "frac_nonzero_outside_crop": 0.0008234349993230697,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3370",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1822498,
+          "n_nonzero_outside_crop": 3894,
+          "frac_nonzero_outside_crop": 0.0021366278591252227,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3371",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1843994,
+          "n_nonzero_outside_crop": 2339,
+          "frac_nonzero_outside_crop": 0.0012684423051268063,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3373",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1784918,
+          "n_nonzero_outside_crop": 4682,
+          "frac_nonzero_outside_crop": 0.0026230896881537413,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3374",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1635143,
+          "n_nonzero_outside_crop": 764,
+          "frac_nonzero_outside_crop": 0.0004672374220481022,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3375",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1653786,
+          "n_nonzero_outside_crop": 1389,
+          "frac_nonzero_outside_crop": 0.0008398910137103592,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3376",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1598646,
+          "n_nonzero_outside_crop": 715,
+          "frac_nonzero_outside_crop": 0.0004472534882644438,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3377",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1527674,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3380",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1407181,
+          "n_nonzero_outside_crop": 55,
+          "frac_nonzero_outside_crop": 3.908523494845368e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3383",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1748004,
+          "n_nonzero_outside_crop": 416,
+          "frac_nonzero_outside_crop": 0.00023798572543312258,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3385",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1563194,
+          "n_nonzero_outside_crop": 1081,
+          "frac_nonzero_outside_crop": 0.0006915328487698903,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3386",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1554966,
+          "n_nonzero_outside_crop": 701,
+          "frac_nonzero_outside_crop": 0.0004508137155410472,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3387",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1503939,
+          "n_nonzero_outside_crop": 34,
+          "frac_nonzero_outside_crop": 2.2607299897136786e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3389",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1579785,
+          "n_nonzero_outside_crop": 2170,
+          "frac_nonzero_outside_crop": 0.001373604636073896,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3390",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1535732,
+          "n_nonzero_outside_crop": 63,
+          "frac_nonzero_outside_crop": 4.102278262092605e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3392",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1527752,
+          "n_nonzero_outside_crop": 1036,
+          "frac_nonzero_outside_crop": 0.0006781205326518964,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3551",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1703016,
+          "n_nonzero_outside_crop": 1473,
+          "frac_nonzero_outside_crop": 0.0008649360898547048,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3552",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1760239,
+          "n_nonzero_outside_crop": 2882,
+          "frac_nonzero_outside_crop": 0.0016372776651352458,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3554",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1629807,
+          "n_nonzero_outside_crop": 690,
+          "frac_nonzero_outside_crop": 0.00042336301169402265,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3555",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1916007,
+          "n_nonzero_outside_crop": 3119,
+          "frac_nonzero_outside_crop": 0.001627864616361005,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3556",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1644896,
+          "n_nonzero_outside_crop": 959,
+          "frac_nonzero_outside_crop": 0.0005830155827480886,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3557",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1743648,
+          "n_nonzero_outside_crop": 3078,
+          "frac_nonzero_outside_crop": 0.0017652645488080163,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3558",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1707279,
+          "n_nonzero_outside_crop": 1241,
+          "frac_nonzero_outside_crop": 0.0007268876381657597,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3559",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1723514,
+          "n_nonzero_outside_crop": 2176,
+          "frac_nonzero_outside_crop": 0.0012625368868486129,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3563",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1677628,
+          "n_nonzero_outside_crop": 1145,
+          "frac_nonzero_outside_crop": 0.0006825112599455898,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3564",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1760865,
+          "n_nonzero_outside_crop": 3321,
+          "frac_nonzero_outside_crop": 0.0018860048896423064,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3565",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1845962,
+          "n_nonzero_outside_crop": 3193,
+          "frac_nonzero_outside_crop": 0.0017297214135502247,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3567",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1647750,
+          "n_nonzero_outside_crop": 4,
+          "frac_nonzero_outside_crop": 2.4275527234107114e-06,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3569",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1499182,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3570",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1880829,
+          "n_nonzero_outside_crop": 1785,
+          "frac_nonzero_outside_crop": 0.0009490495946202446,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3571",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1895274,
+          "n_nonzero_outside_crop": 4719,
+          "frac_nonzero_outside_crop": 0.0024898774530753864,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3572",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1455180,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3574",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1528339,
+          "n_nonzero_outside_crop": 101,
+          "frac_nonzero_outside_crop": 6.608481495270356e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3575",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1821988,
+          "n_nonzero_outside_crop": 2430,
+          "frac_nonzero_outside_crop": 0.0013337080156400592,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3577",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1842203,
+          "n_nonzero_outside_crop": 3412,
+          "frac_nonzero_outside_crop": 0.0018521303026865117,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3584",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1920740,
+          "n_nonzero_outside_crop": 4450,
+          "frac_nonzero_outside_crop": 0.00231681539406687,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3585",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1690624,
+          "n_nonzero_outside_crop": 760,
+          "frac_nonzero_outside_crop": 0.000449538158691702,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3586",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1692555,
+          "n_nonzero_outside_crop": 37,
+          "frac_nonzero_outside_crop": 2.1860441758170342e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3587",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1826332,
+          "n_nonzero_outside_crop": 2887,
+          "frac_nonzero_outside_crop": 0.0015807640669932958,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3588",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1576873,
+          "n_nonzero_outside_crop": 251,
+          "frac_nonzero_outside_crop": 0.0001591757865091228,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3589",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1501288,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3591",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1775132,
+          "n_nonzero_outside_crop": 2127,
+          "frac_nonzero_outside_crop": 0.001198220752034215,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3592",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1787632,
+          "n_nonzero_outside_crop": 1566,
+          "frac_nonzero_outside_crop": 0.0008760192254334225,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3593",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1598546,
+          "n_nonzero_outside_crop": 872,
+          "frac_nonzero_outside_crop": 0.0005454957192348546,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3750",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1852542,
+          "n_nonzero_outside_crop": 2344,
+          "frac_nonzero_outside_crop": 0.001265288452299597,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3752",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1693111,
+          "n_nonzero_outside_crop": 47,
+          "frac_nonzero_outside_crop": 2.7759550318909982e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3756",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1750283,
+          "n_nonzero_outside_crop": 3483,
+          "frac_nonzero_outside_crop": 0.0019899639086936225,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3759",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1414741,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3767",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1550526,
+          "n_nonzero_outside_crop": 69,
+          "frac_nonzero_outside_crop": 4.45010273932846e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3768",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1759601,
+          "n_nonzero_outside_crop": 1544,
+          "frac_nonzero_outside_crop": 0.0008774716540852159,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3769",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1651535,
+          "n_nonzero_outside_crop": 125,
+          "frac_nonzero_outside_crop": 7.5687163759775e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3779",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1966791,
+          "n_nonzero_outside_crop": 1665,
+          "frac_nonzero_outside_crop": 0.0008465566498931508,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3789",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1575978,
+          "n_nonzero_outside_crop": 246,
+          "frac_nonzero_outside_crop": 0.0001560935495292447,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3803",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1593554,
+          "n_nonzero_outside_crop": 25,
+          "frac_nonzero_outside_crop": 1.5688203851265786e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3804",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1537788,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3805",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1471188,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3806",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1583205,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3807",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1663700,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3811",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1751187,
+          "n_nonzero_outside_crop": 2104,
+          "frac_nonzero_outside_crop": 0.0012014707738236979,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3812",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1429101,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3813",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1686509,
+          "n_nonzero_outside_crop": 1015,
+          "frac_nonzero_outside_crop": 0.0006018349146076303,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3816",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1685972,
+          "n_nonzero_outside_crop": 336,
+          "frac_nonzero_outside_crop": 0.00019929156593347932,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3817",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1696870,
+          "n_nonzero_outside_crop": 1173,
+          "frac_nonzero_outside_crop": 0.0006912727551315068,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3823",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1703034,
+          "n_nonzero_outside_crop": 738,
+          "frac_nonzero_outside_crop": 0.0004333442550178094,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3824",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1675942,
+          "n_nonzero_outside_crop": 342,
+          "frac_nonzero_outside_crop": 0.00020406434112875028,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3825",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 2002623,
+          "n_nonzero_outside_crop": 6338,
+          "frac_nonzero_outside_crop": 0.0031648493001428628,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3826",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1624689,
+          "n_nonzero_outside_crop": 827,
+          "frac_nonzero_outside_crop": 0.0005090204956148531,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3827",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1561135,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3828",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1658658,
+          "n_nonzero_outside_crop": 466,
+          "frac_nonzero_outside_crop": 0.0002809500210411067,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3829",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1684865,
+          "n_nonzero_outside_crop": 114,
+          "frac_nonzero_outside_crop": 6.766120727773442e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3830",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1436909,
+          "n_nonzero_outside_crop": 178,
+          "frac_nonzero_outside_crop": 0.000123877016568203,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3831",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1584171,
+          "n_nonzero_outside_crop": 227,
+          "frac_nonzero_outside_crop": 0.00014329261171931566,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3832",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1757421,
+          "n_nonzero_outside_crop": 913,
+          "frac_nonzero_outside_crop": 0.0005195112611036286,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3833",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1568979,
+          "n_nonzero_outside_crop": 522,
+          "frac_nonzero_outside_crop": 0.000332700437673162,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3834",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1917926,
+          "n_nonzero_outside_crop": 1430,
+          "frac_nonzero_outside_crop": 0.000745597066831567,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3835",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1771044,
+          "n_nonzero_outside_crop": 569,
+          "frac_nonzero_outside_crop": 0.00032127942614638597,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3837",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1776923,
+          "n_nonzero_outside_crop": 2740,
+          "frac_nonzero_outside_crop": 0.0015419914087442168,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3838",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1728642,
+          "n_nonzero_outside_crop": 127,
+          "frac_nonzero_outside_crop": 7.346807493975039e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3850",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1455604,
+          "n_nonzero_outside_crop": 478,
+          "frac_nonzero_outside_crop": 0.0003283860170760729,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3851",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1450890,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3852",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1731979,
+          "n_nonzero_outside_crop": 1783,
+          "frac_nonzero_outside_crop": 0.0010294582093662798,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3853",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1618220,
+          "n_nonzero_outside_crop": 381,
+          "frac_nonzero_outside_crop": 0.00023544388278478822,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3854",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1717273,
+          "n_nonzero_outside_crop": 1084,
+          "frac_nonzero_outside_crop": 0.0006312333566066665,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3855",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1489959,
+          "n_nonzero_outside_crop": 1084,
+          "frac_nonzero_outside_crop": 0.000727536797992428,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3857",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1335087,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3859",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1588571,
+          "n_nonzero_outside_crop": 153,
+          "frac_nonzero_outside_crop": 9.631297562400421e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3866",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1361372,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "3867",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1497822,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "4004",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1468874,
+          "n_nonzero_outside_crop": 727,
+          "frac_nonzero_outside_crop": 0.0004949369380899927,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "4010",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1558103,
+          "n_nonzero_outside_crop": 0,
+          "frac_nonzero_outside_crop": 0.0,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "4018",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1540241,
+          "n_nonzero_outside_crop": 905,
+          "frac_nonzero_outside_crop": 0.0005875703867122093,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "4020",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1750431,
+          "n_nonzero_outside_crop": 2995,
+          "frac_nonzero_outside_crop": 0.0017110071748043768,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "4032",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1463654,
+          "n_nonzero_outside_crop": 136,
+          "frac_nonzero_outside_crop": 9.291813502371461e-05,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "4067",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1611346,
+          "n_nonzero_outside_crop": 1685,
+          "frac_nonzero_outside_crop": 0.0010457096117159196,
+          "n_nonfinite": 0
+        },
+        {
+          "id": "4139",
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS",
+          "n_nonzero": 1649306,
+          "n_nonzero_outside_crop": 1120,
+          "frac_nonzero_outside_crop": 0.0006790735012180881,
+          "n_nonfinite": 0
+        }
+      ]
+    },
+    "roi": {
+      "field": "roi",
+      "volume_root": "/workspace/IL-CLDM/data_rois/whole_MRI",
+      "n_files": 181,
+      "shapes": {
+        "(96, 112, 114)": 181
+      },
+      "zooms_mm": {
+        "(1.0, 1.0, 1.0)": 181
+      },
+      "axcodes": {
+        "LAS": 181
+      },
+      "dtypes": {
+        "float32": 181
+      },
+      "reference_affine": [
+        [
+          -1.0,
+          -0.0,
+          0.0,
+          48.0
+        ],
+        [
+          -0.0,
+          1.0,
+          -0.0,
+          -70.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -72.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "max_abs_affine_diff_vs_first": 0.0,
+      "crop_index": null,
+      "note": "ROI patches are already cropped to the striatal bbox; no IL-CLDM [10:170,...] crop is applied.",
+      "expected_shape": [
+        96,
+        112,
+        114
+      ],
+      "subjects": [
+        {
+          "id": "3102",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3104",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3105",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3106",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3107",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3108",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3111",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3112",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3113",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3114",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3115",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3116",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3118",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3119",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3120",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3122",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3123",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3124",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3125",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3126",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3127",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3128",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3129",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3130",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3131",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3132",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3134",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3150",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3151",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3154",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3157",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3160",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3161",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3165",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3166",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3167",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3168",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3169",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3171",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3172",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3173",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3174",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3175",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3176",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3178",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3181",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3182",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3184",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3185",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3188",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3190",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3191",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3300",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3301",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3305",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3307",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3308",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3309",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3310",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3311",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3314",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3316",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3318",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3320",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3321",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3322",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3323",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3325",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3327",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3328",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3332",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3350",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3352",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3353",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3354",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3355",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3357",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3358",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3359",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3360",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3361",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3364",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3365",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3366",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3367",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3368",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3369",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3370",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3371",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3373",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3374",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3375",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3376",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3377",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3380",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3383",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3385",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3386",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3387",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3389",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3390",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3392",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3551",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3552",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3554",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3555",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3556",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3557",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3558",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3559",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3563",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3564",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3565",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3567",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3569",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3570",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3571",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3572",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3574",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3575",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3577",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3584",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3585",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3586",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3587",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3588",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3589",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3591",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3592",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3593",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3750",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3752",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3756",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3759",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3767",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3768",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3769",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3779",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3789",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3803",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3804",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3805",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3806",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3807",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3811",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3812",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3813",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3816",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3817",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3823",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3824",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3825",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3826",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3827",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3828",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3829",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3830",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3831",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3832",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3833",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3834",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3835",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3837",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3838",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3850",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3851",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3852",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3853",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3854",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3855",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3857",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3859",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3866",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "3867",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "4004",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "4010",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "4018",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "4020",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "4032",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "4067",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        },
+        {
+          "id": "4139",
+          "shape": [
+            96,
+            112,
+            114
+          ],
+          "zooms_mm": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "axcodes": "LAS"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "experiment": "brainiac_vit_mci_pdhead",
+  "field": "roi",
+  "framework": "pytorch",
+  "backbone": "BrainIAC ViT-B fine-tuned on MCI (vit_mci.ckpt), frozen",
+  "backbone_frozen": true,
+  "feature": "token_0 of ViT output, dim 768 (no learned CLS; matches BrainIAC ViTBackboneNet)",
+  "head": "768-300-150-75-2",
+  "head_hidden_activation": "ReLU",
+  "discarded_mci_head": [
+    [
+      "head.fc.bias",
+      [
+        1
+      ]
+    ],
+    [
+      "head.fc.weight",
+      [
+        1,
+        768
+      ]
+    ]
+  ],
+  "activation_out": "softmax",
+  "loss": "cross_entropy",
+  "class_weight": null,
+  "dropout": 0.0,
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "seed": 42,
+  "epochs_max": 80,
+  "patience": 10,
+  "early_stop_metric": "val_subject_balanced_accuracy",
+  "best_epoch": 1,
+  "best_val_balanced_accuracy": 0.5,
+  "batch_size_head": 32,
+  "n_train_subjects": 132,
+  "n_val_subjects": 15,
+  "n_test_subjects": 34,
+  "split_dir": "/workspace/IL-FST/classifiers/classifiers_roi_4mm/_shared_split_z78_112",
+  "baseline_classifier": "classifiers/classifiers_roi_4mm/mri",
+  "baseline_metrics": "/workspace/IL-FST/classifiers/classifiers_roi_4mm/mri/metrics_test.json",
+  "volume_root": "/workspace/IL-CLDM/data_rois/whole_MRI",
+  "crop": null,
+  "roi_patch_note": "Full 3D ROI patch 96x112x114 is resized to 96^3. The MobileNet baseline only sees axial slices z in [78, 112].",
+  "input_size": [
+    96,
+    96,
+    96
+  ],
+  "resize": "monai.Resize trilinear",
+  "normalize": "monai.NormalizeIntensity nonzero=True channel_wise=True",
+  "checkpoint": "/workspace/IL-FST/checkpoints/vit_mci.ckpt",
+  "checkpoint_source": "https://huggingface.co/eugenehp/brainiac/resolve/main/mci.safetensors",
+  "feature_cache": "/workspace/IL-FST/data/feat_cache_brainiac_vit_mci_pdhead/mri_roi_4mm",
+  "head_weights": "/workspace/IL-FST/classifiers/brainiac_vit_mci_pdhead/mri_roi_4mm/head.pt"
+}

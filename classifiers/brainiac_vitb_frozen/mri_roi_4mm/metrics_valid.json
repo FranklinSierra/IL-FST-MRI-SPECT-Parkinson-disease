@@ -1,0 +1,138 @@
+{
+  "n_subjects": 15,
+  "accuracy": 0.4,
+  "balanced_accuracy": 0.5,
+  "f1_macro": 0.2857142857142857,
+  "confusion_matrix": [
+    [
+      6,
+      0
+    ],
+    [
+      9,
+      0
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1-score": 0.5714285714285714,
+      "support": 6.0
+    },
+    "1": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 9.0
+    },
+    "accuracy": 0.4,
+    "macro avg": {
+      "precision": 0.2,
+      "recall": 0.5,
+      "f1-score": 0.2857142857142857,
+      "support": 15.0
+    },
+    "weighted avg": {
+      "precision": 0.16000000000000003,
+      "recall": 0.4,
+      "f1-score": 0.22857142857142856,
+      "support": 15.0
+    }
+  },
+  "per_subject": [
+    {
+      "subject_id": "3115",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35512402653694153
+    },
+    {
+      "subject_id": "3128",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3516918420791626
+    },
+    {
+      "subject_id": "3354",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3581596314907074
+    },
+    {
+      "subject_id": "3365",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3540343940258026
+    },
+    {
+      "subject_id": "3389",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35646381974220276
+    },
+    {
+      "subject_id": "3564",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35890713334083557
+    },
+    {
+      "subject_id": "3577",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3604307174682617
+    },
+    {
+      "subject_id": "3586",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3513399064540863
+    },
+    {
+      "subject_id": "3779",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.367800235748291
+    },
+    {
+      "subject_id": "3812",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3529087007045746
+    },
+    {
+      "subject_id": "3823",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3529791533946991
+    },
+    {
+      "subject_id": "3830",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.35125893354415894
+    },
+    {
+      "subject_id": "3835",
+      "label": 1,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3524533212184906
+    },
+    {
+      "subject_id": "3854",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3649176359176636
+    },
+    {
+      "subject_id": "4067",
+      "label": 0,
+      "pred_class": 0,
+      "pred_prob_pd": 0.3570341169834137
+    }
+  ],
+  "decision": "argmax",
+  "score_for_auc": "softmax[:,1]",
+  "auc": 0.25925925925925924
+}
